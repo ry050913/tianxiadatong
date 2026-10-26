@@ -1,0 +1,877 @@
+  /* 基础样式 */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      font-family: 'Noto Serif SC', serif;
+      background-color: #f5f2ef;
+      color: #4a4a4a;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+
+  /* 返回按钮 */
+  .back-button {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(213, 193, 173, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(166, 148, 104, 0.2);
+  }
+
+  .back-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.95);
+  }
+
+  .back-button i {
+      color: #a69468;
+      font-size: 1.2rem;
+  }
+
+  /* 背景动画 - 云冈石窟纹理 */
+  .bg-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+          radial-gradient(circle at 20% 30%, rgba(166, 148, 104, 0.05) 0%, transparent 30%),
+          radial-gradient(circle at 80% 70%, rgba(76, 61, 32, 0.05) 0%, transparent 30%),
+          linear-gradient(135deg, #f0ece4 0%, #f5f3ef 100%);
+      /* 浅色渐变背景 */
+      z-index: -2;
+  }
+
+  /* 粒子效果容器 */
+  .particles-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+  }
+
+  /* 主容器 */
+  .container {
+      width: 950px;
+      display: flex;
+      background: rgba(255, 255, 255, 0.9);
+      /* 白色半透明背景 */
+      border-radius: 15px;
+      box-shadow:
+          0 25px 50px -12px rgba(0, 0, 0, 0.1),
+          0 0 0 1px rgba(196, 183, 152, 0.1),
+          0 0 30px rgba(166, 148, 104, 0.1);
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      position: relative;
+      z-index: 10;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+  }
+
+  /* 左侧logo区域 - 加入云冈石窟元素 */
+  .logo-container {
+      width: 45%;
+      padding: 60px 40px;
+      background:
+          linear-gradient(135deg, #bd896d 0%, #774328 100%),
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M30,50 Q50,30 70,50 Q90,70 70,90 Q50,110 30,90 Q10,70 30,50" fill="none" stroke="%23a69468" stroke-width="0.3" opacity="0.1"/></svg>');
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-right: 1px solid rgba(166, 148, 104, 0.1);
+  }
+
+  .logo-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23a69468" stroke-width="0.3" stroke-dasharray="5,5" opacity="0.1"/></svg>'),
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,50 Q25,25 40,50 Q55,75 70,50 Q85,25 100,50" fill="none" stroke="%23a69468" stroke-width="0.5" opacity="0.05"/></svg>');
+      opacity: 0.2;
+  }
+
+  .logo-text {
+      width: 440px;
+      height: 200px;
+      /* 更柔和的棕色 */
+      margin-bottom: 20px;
+      display: flex;
+      text-shadow:
+          0 0 10px rgba(138, 109, 59, 0.1),
+          0 0 20px rgba(166, 148, 104, 0.1);
+      position: relative;
+      z-index: 2;
+  }
+
+  .logo-text img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .logo-char {
+      display: inline-block;
+      position: relative;
+      margin: 0 5px;
+      transition: all 0.4s ease;
+      transform-style: preserve-3d;
+  }
+
+  .logo-char:hover {
+      transform: translateY(-8px) rotateX(15deg);
+      text-shadow:
+          0 5px 15px rgba(138, 109, 59, 0.2),
+          0 10px 30px rgba(166, 148, 104, 0.1);
+  }
+
+  .logo-subtitle {
+      font-size: 1.1rem;
+      color: rgba(224, 213, 194, 0.8);
+      letter-spacing: 3px;
+      margin-top: 0px;
+      text-shadow: 0 0 10px rgba(166, 148, 104, 0.1);
+      position: relative;
+      z-index: 2;
+  }
+
+  /* 右侧表单区域 */
+  .form-container {
+      width: 55%;
+      padding: 60px 50px;
+      position: relative;
+      /* background-color: #ddd7c9; */
+      /* background: url(../images/zhucebeijing.png) no-repeat; */
+      background-size: 100% 100%;
+  }
+
+  .form-toggle {
+      display: flex;
+      margin-bottom: 40px;
+      position: relative;
+  }
+
+  .form-toggle::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background: linear-gradient(to right, #a98466, #592c1e);
+      /* 调整颜色 */
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      box-shadow: 0 2px 10px rgba(166, 148, 104, 0.1);
+  }
+
+  .form-toggle.register-active::after {
+      left: 50%;
+  }
+
+  .toggle-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      padding: 12px;
+      font-size: 1.3rem;
+      color: rgba(74, 74, 74, 0.7);
+      /* 深灰色 */
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      outline: none;
+      letter-spacing: 2px;
+  }
+
+  .toggle-btn.active {
+      color: #8a6d3b;
+      /* 棕色 */
+      font-weight: 600;
+      text-shadow: 0 0 10px rgba(138, 109, 59, 0.1);
+  }
+
+  .toggle-btn:not(.active):hover {
+      color: rgba(74, 74, 74, 0.9);
+  }
+
+  .form-content {
+      display: none;
+  }
+
+  .form-content.active {
+      display: block;
+      animation: fadeIn 0.6s ease forwards;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(15px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .input-group {
+      margin-bottom: 30px;
+      position: relative;
+  }
+
+  .input-group input {
+      width: 100%;
+      padding: 12px 0;
+      font-size: 1.05rem;
+      color: #4a4a4a;
+      /* 深灰色文字 */
+      border: none;
+      border-bottom: 1px solid rgba(166, 148, 104, 0.3);
+      outline: none;
+      background: transparent;
+      transition: all 0.4s ease;
+      letter-spacing: 1px;
+  }
+
+  .input-group input:focus {
+      border-bottom-color: #a69468;
+      box-shadow: 0 2px 0 rgba(166, 148, 104, 0.2);
+  }
+
+  .input-group input:focus+label,
+  .input-group input:valid+label {
+      transform: translateY(-22px);
+      font-size: 0.8rem;
+      color: #8a6d3b;
+      /* 棕色 */
+      letter-spacing: 1px;
+  }
+
+  .input-group label {
+      position: absolute;
+      top: 12px;
+      left: 0;
+      font-size: 1.05rem;
+      color: rgba(74, 74, 74, 0.6);
+      /* 深灰色 */
+      pointer-events: none;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+  .input-decoration {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      overflow: hidden;
+  }
+
+  .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #ae9173, #592c1e);
+      /* 调整颜色 */
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      margin-top: 15px;
+      outline: none;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+  }
+
+  .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #8a6d3b, #592c1e);
+      /* 调整颜色 */
+      transition: all 0.4s ease;
+      z-index: -1;
+  }
+
+  .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow:
+          0 5px 20px rgba(166, 148, 104, 0.3),
+          0 0 0 2px rgba(166, 148, 104, 0.1);
+  }
+
+  .submit-btn:hover::before {
+      left: 0;
+  }
+
+  .divider {
+      display: flex;
+      align-items: center;
+      margin: 30px 0;
+  }
+
+  .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(166, 148, 104, 0.3), transparent);
+  }
+
+  .divider-text {
+      padding: 0 15px;
+      color: rgba(138, 109, 59, 0.6);
+      /* 棕色 */
+      font-size: 0.9rem;
+      text-shadow: 0 0 5px rgba(166, 148, 104, 0.1);
+  }
+
+  .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+  }
+
+  .social-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid rgba(166, 148, 104, 0.2);
+      background: rgba(255, 255, 255, 0.8);
+      color: rgba(74, 74, 74, 0.7);
+      /* 深灰色 */
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      font-size: 1.2rem;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+  }
+
+  .social-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(166, 148, 104, 0.1);
+      transform: scale(0);
+      border-radius: 50%;
+      transition: all 0.4s ease;
+      z-index: -1;
+  }
+
+  .social-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-btn:hover::before {
+      transform: scale(1);
+  }
+
+  .social-btn.wechat:hover {
+      background: #07C160;
+      color: white;
+      border-color: #07C160;
+  }
+
+  .social-btn.weibo:hover {
+      background: #E6162D;
+      color: white;
+      border-color: #E6162D;
+  }
+
+  .social-btn.qq:hover {
+      background: #12B7F5;
+      color: white;
+      border-color: #12B7F5;
+  }
+
+  /* 文化元素装饰 - 加入更多大同特色 */
+  .cultural-elements {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+  }
+
+  .element {
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.15;
+      transition: all 0.6s ease;
+      filter: drop-shadow(0 0 5px rgba(166, 148, 104, 0.2));
+  }
+
+  /* 云冈石窟佛像轮廓 */
+  .buddha {
+      width: 180px;
+      height: 250px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 100"><path d="M30,0 Q40,10 35,20 Q40,30 30,40 Q20,30 25,20 Q20,10 30,0 M30,40 L30,60 Q20,70 20,80 Q30,90 30,100 Q30,90 40,80 Q40,70 30,60" fill="none" stroke="%238a6d3b" stroke-width="1"/></svg>');
+      top: 10%;
+      right: 5%;
+      animation: float 20s infinite ease-in-out;
+  }
+
+  /* 悬空寺轮廓 */
+  .hanging-temple {
+      width: 220px;
+      height: 150px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60"><path d="M10,30 L20,20 L30,30 L40,20 L50,30 L60,20 L70,30 L80,20 L90,30 L90,40 L80,30 L70,40 L60,30 L50,40 L40,30 L30,40 L20,30 L10,40 Z M20,20 L20,10 L25,5 L30,10 L30,20 M50,20 L50,10 L55,5 L60,10 L60,20" fill="none" stroke="%238a6d3b" stroke-width="1"/></svg>');
+      bottom: 15%;
+      left: 3%;
+      animation: float 18s infinite ease-in-out reverse;
+  }
+
+  /* 九龙壁元素 */
+  .dragon-wall {
+      width: 300px;
+      height: 100px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50"><path d="M10,25 Q15,15 25,20 Q35,10 45,20 Q55,10 65,20 Q75,10 85,20 Q95,10 105,20 Q115,10 125,20 Q135,10 145,20 Q155,10 165,20 Q175,15 180,25 Q175,35 165,30 Q155,40 145,30 Q135,40 125,30 Q115,40 105,30 Q95,40 85,30 Q75,40 65,30 Q55,40 45,30 Q35,40 25,30 Q15,35 10,25" fill="none" stroke="%238a6d3b" stroke-width="1"/></svg>');
+      top: 20%;
+      left: 10%;
+      animation: float 25s infinite ease-in-out;
+  }
+
+  /* 华严寺塔轮廓 */
+  .huayan-pagoda {
+      width: 120px;
+      height: 200px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 70"><path d="M20,0 L25,5 L15,5 Z M15,5 L25,5 L25,15 L15,15 Z M18,15 L22,15 L22,25 L18,25 Z M15,25 L25,25 L25,35 L15,35 Z M18,35 L22,35 L22,45 L18,45 Z M15,45 L25,45 L25,55 L15,55 Z M18,55 L22,55 L22,65 L18,65 Z" fill="none" stroke="%238a6d3b" stroke-width="1"/></svg>');
+      bottom: 10%;
+      right: 8%;
+      animation: float 15s infinite ease-in-out reverse;
+  }
+
+  /* 大同古城墙元素 */
+  .city-wall {
+      width: 350px;
+      height: 80px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40"><path d="M0,20 L20,10 L40,20 L60,10 L80,20 L100,10 L120,20 L140,10 L160,20 L180,10 L200,20 L200,30 L180,20 L160,30 L140,20 L120,30 L100,20 L80,30 L60,20 L40,30 L20,20 L0,30 Z M20,10 L20,0 L30,0 L40,10 M80,10 L80,0 L90,0 L100,10 M140,10 L140,0 L150,0 L160,10" fill="none" stroke="%238a6d3b" stroke-width="1"/></svg>');
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: float 30s infinite linear;
+  }
+
+  /* 飘动的云 */
+  .cloud {
+      width: 150px;
+      height: 80px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><path d="M20,25 Q10,25 10,15 Q10,5 20,5 Q25,0 30,5 Q40,5 40,15 Q50,15 50,25 Q60,25 60,20 Q70,20 70,30 Q60,30 60,35 Q60,40 50,40 Q40,40 35,35 Q30,40 20,40 Q10,40 10,30 Q10,25 20,25" fill="%238a6d3b" opacity="0.8"/></svg>');
+      animation: float 15s infinite ease-in-out;
+  }
+
+  .cloud-1 {
+      top: 15%;
+      left: 5%;
+      opacity: 0.2;
+  }
+
+  .cloud-2 {
+      width: 200px;
+      height: 100px;
+      bottom: 20%;
+      right: 8%;
+      opacity: 0.15;
+      animation-duration: 20s;
+  }
+
+  @keyframes float {
+
+      0%,
+      100% {
+          transform: translateY(0) translateX(0);
+      }
+
+      50% {
+          transform: translateY(-20px) translateX(10px);
+      }
+  }
+
+  /* 3D光影效果 */
+  .light-effect {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(166, 148, 104, 0.1) 0%, transparent 70%);
+      filter: blur(30px);
+      z-index: -1;
+  }
+
+  .light-1 {
+      top: -100px;
+      right: -100px;
+      animation: lightMove 15s infinite alternate ease-in-out;
+  }
+
+  .light-2 {
+      bottom: -80px;
+      left: -80px;
+      animation: lightMove 18s infinite alternate-reverse ease-in-out;
+  }
+
+  @keyframes lightMove {
+      0% {
+          transform: translate(0, 0);
+      }
+
+      100% {
+          transform: translate(50px, 50px);
+      }
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 992px) {
+      .container {
+          width: 90%;
+          max-width: 800px;
+      }
+
+      .logo-text {
+          font-size: 3.2rem;
+      }
+
+      .form-container {
+          padding: 50px 40px;
+      }
+
+      .back-button {
+          top: 20px;
+          left: 20px;
+          width: 45px;
+          height: 45px;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .container {
+          flex-direction: column;
+          width: 95%;
+          max-width: 500px;
+      }
+
+      .logo-container,
+      .form-container {
+          width: 100%;
+      }
+
+      .logo-container {
+          padding: 40px 30px;
+          border-right: none;
+          border-bottom: 1px solid rgba(166, 148, 104, 0.1);
+      }
+
+      .form-container {
+          padding: 40px 30px;
+      }
+
+      .logo-text {
+          font-size: 2.8rem;
+      }
+
+      .buddha,
+      .hanging-temple,
+      .dragon-wall,
+      .huayan-pagoda,
+      .city-wall {
+          display: none;
+      }
+
+      .back-button {
+          top: 15px;
+          left: 15px;
+          width: 40px;
+          height: 40px;
+      }
+  }
+
+  /* 成功消息样式 */
+  .success-message {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      color: #8a6d3b;
+      animation: fadeIn 0.5s ease forwards;
+      z-index: 100;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+  }
+
+  /* 粒子连接线动画 */
+  .particles-js-canvas-el {
+      animation: particleGlow 3s infinite alternate;
+  }
+
+  @keyframes particleGlow {
+      0% {
+          opacity: 0.5;
+      }
+
+      100% {
+          opacity: 0.8;
+      }
+  }
+
+  /* 输入框聚焦时的光效 */
+  .input-group:focus-within::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #a69468, transparent);
+      box-shadow: 0 0 10px rgba(166, 148, 104, 0.3);
+      animation: inputFocus 0.6s ease forwards;
+  }
+
+  @keyframes inputFocus {
+      0% {
+          transform: scaleX(0);
+          opacity: 0;
+      }
+
+      100% {
+          transform: scaleX(1);
+          opacity: 1;
+      }
+  }
+
+  /* 登录注册切换时的3D翻转效果 */
+  .form-content {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transform-origin: top center;
+  }
+
+  .form-content.active {
+      animation: flipIn 0.6s ease forwards;
+  }
+
+  @keyframes flipIn {
+      0% {
+          transform: rotateX(90deg);
+          opacity: 0;
+      }
+
+      100% {
+          transform: rotateX(0);
+          opacity: 1;
+      }
+  }
+
+  .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f5f3ef;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .zhucebiankuang1 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 20px;
+      left: 20px;
+
+  }
+
+  .zhucebiankuang2 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      bottom: 20px;
+      right: 20px;
+
+  }
+
+
+
+
+
+
+
+
+  /* 侧边栏 */
+  :root {
+      --primary-color: #6b4423;
+      /* 深褐色 */
+      --secondary-color: #d4af37;
+      /* 金色 */
+      --bg-color: #f5e6d3;
+      /* 浅黄背景 */
+  }
+
+  /* 侧边栏基础样式 */
+  .sidebar {
+      position: fixed;
+      left: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      background: var(--primary-color);
+      border-radius: 0 15px 15px 0;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      z-index: 5000;
+      opacity: 0;
+      visibility: hidden;
+  }
+
+  /* 显示侧边栏 */
+  .sidebar.visible {
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+  }
+
+  /* 悬停展开 */
+  .sidebar:hover {
+      width: 160px;
+  }
+
+  /* 导航菜单 */
+  .nav-menu {
+      padding: 0px 7px;
+      list-style: none;
+  }
+
+  .nav-item {
+      margin: 25px 0;
+      position: relative;
+      white-space: nowrap;
+  }
+
+  .nav-link {
+      color: var(--secondary-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border-radius: 8px;
+      transition: 0.3s;
+  }
+
+  .nav-link:hover {
+      background: var(--secondary-color);
+      transform: translateX(5px);
+  }
+
+  /* 图标样式 */
+
+
+  .nav-icon {
+      font-size: 1.5rem;
+      width: 30px;
+      flex-shrink: 0;
+  }
+
+  .nav-link:hover .nav-icon {
+
+      color: var(--primary-color);
+  }
+
+
+  /* 文字样式 */
+  .nav-text {
+      font-family: 'SimSun', serif;
+      /* 宋体 */
+      margin-left: 15px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      color: #ffffff;
+      font-size: 16px;
+  }
+
+  /* 悬停显示文字 */
+  .sidebar:hover .nav-text {
+      opacity: 1;
+  }
+
+  /* 复古装饰线 */
+  /* .sidebar::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 10%;
+    height: 80%;
+    width: 3px;
+    background: linear-gradient(to bottom,
+            var(--secondary-color),
+            var(--bg-color),
+            var(--secondary-color));
+    border-radius: 2px;
+} */
+  .sidebar::after {
+      content: '';
+      position: absolute;
+      right: 5px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(to bottom,
+              transparent 10%,
+              var(--secondary-color) 10% 90%,
+              transparent 90%);
+  }

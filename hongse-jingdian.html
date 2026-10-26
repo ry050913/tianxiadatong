@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大同红色记忆 - 革命圣地巡礼</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lingxing.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'JianYiLaoSong';
+      src:
+        url('../fonts/jianyilaosong.woff2') format('woff2'),
+        url('../fonts/jianyilaosong.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Serif SC', 'Microsoft YaHei', serif;
+    }
+
+    body {
+      background-color: #f9f5f0;
+      color: #333;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    .dt-banner {
+      height: 100vh;
+      background: url('images/红色旅游类banner.png') no-repeat center center/cover;
+      position: relative;
+      overflow: hidden;
+      animation: dt-zoomIn 3s ease-out forwards;
+    }
+
+    @keyframes dt-zoomIn {
+      from {
+        transform: scale(1.2);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    /* 文字排版美化 */
+    h2 {
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.3;
+
+    }
+
+    p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      text-align: justify;
+      text-justify: inter-ideograph;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.2em;
+    }
+
+    /* 平型关大捷白色框下移 */
+    .dt-bg-content {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      margin: 250px 70px 60px;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-indent: 2em;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .dt-bg-content.dt-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 白求恩医院白色框下移 */
+    .dt-center-content {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 50px;
+      max-width: 1000px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 270px;
+      text-indent: 2em;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .dt-center-content.dt-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 烈士陵园部分美化 - 移除滚动条 */
+    .dt-split-title {
+      padding: 60px 0 30px;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(249, 245, 240, 0.9), rgba(249, 245, 240, 0.7));
+      width: 100%;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+      /* font-family: 'JianYiLaoSong'; */
+    }
+
+    .dt-split-title.dt-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dt-split-title h2 {
+      font-size: 2.4rem;
+      color: #8b0000;
+      position: relative;
+      display: inline-block;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      letter-spacing: 2px;
+      /* font-family: 'JianYiLaoSong'; */
+    }
+
+    .dt-split-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: #8b0000;
+      border-radius: 2px;
+    }
+
+    .dt-split-content {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      height: auto;
+      /* 改为自动高度 */
+      overflow: visible;
+      /* 移除滚动 */
+      position: relative;
+      z-index: 2;
+      margin-top: -80px;
+      border-radius: 15px 15px 0 0;
+      width: 90%;
+      border-left: 5px solid #8b0000;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out 0.3s;
+    }
+
+    .dt-split-content.dt-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dt-split-content p {
+      margin-bottom: 25px;
+      font-size: 1.15rem;
+      color: #444;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+      line-height: 1.9;
+      text-indent: 2em;
+    }
+
+    /* 以下保持原有样式不变 */
+    .dt-section {
+      background: url('images/万人坑-bg.png') no-repeat center center/cover;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dt-section-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .dt-attraction-card {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 80vh;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .dt-attraction-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .dt-card-img {
+      flex: 1;
+      background: url('images/万人坑.png') no-repeat center center/cover;
+      border: 15px solid #f0e6d9;
+      box-sizing: border-box;
+      margin: 20px;
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .dt-card-img.dt-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .dt-card-content {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow-y: auto;
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s ease-out 0.3s;
+      text-indent: 2em;
+    }
+
+    .dt-card-content.dt-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .dt-card-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #8b0000;
+      position: relative;
+    }
+
+    .dt-card-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background: #8b0000;
+    }
+
+    .dt-attraction-bg {
+      width: 100%;
+      height: 100vh;
+      background: url('images/平型关大捷.png') no-repeat center/cover;
+      background-color: #f9f5f0;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    .dt-bg-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #8b0000;
+      position: relative;
+    }
+
+    .dt-bg-content h2::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 50px;
+      height: 5px;
+      background: #8b0000;
+    }
+
+    .dt-attraction-split {
+      background-color: #f9f5f0;
+      background: url('images/万人坑-bg.png') no-repeat center center/cover;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #f9f5f0;
+    }
+
+    .dt-split-img-container {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      height: 50%;
+      overflow: hidden;
+    }
+
+    .dt-split-img {
+      width: 100%;
+      height: 100%;
+      background: url('images/烈士陵园1.png') no-repeat center center/cover;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.8s ease-out;
+    }
+
+    .dt-split-img.dt-animate {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .dt-attraction-center {
+      width: 100%;
+      height: 100vh;
+      background: url('images/白求恩医院遗址.png') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .dt-center-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #8b0000;
+    }
+
+    @media (max-width: 992px) {
+      .dt-attraction-card {
+        flex-direction: column;
+        height: auto;
+        min-height: 80vh;
+      }
+
+      .dt-card-img {
+        height: 300px;
+        flex: none;
+        margin: 10px;
+        border-width: 10px;
+      }
+
+      .dt-attraction-bg {
+        height: 80vh;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .dt-bg-content {
+        margin: 20px;
+        max-width: 90%;
+      }
+
+      .dt-attraction-split {
+        height: auto;
+        min-height: 80vh;
+      }
+
+      .dt-split-img-container {
+        height: 300px;
+      }
+
+      .dt-split-content {
+        margin-top: -30px;
+        height: auto;
+        width: 95%;
+        padding: 30px;
+      }
+
+      .dt-attraction-center {
+        height: 80vh;
+      }
+
+      .dt-center-content {
+        padding: 30px;
+        margin: 20px;
+      }
+
+      .dt-split-title h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .dt-banner h1 {
+        font-size: 2.5rem;
+      }
+
+      .dt-banner p {
+        font-size: 1.2rem;
+      }
+
+      .dt-card-content,
+      .dt-bg-content,
+      .dt-split-content,
+      .dt-center-content {
+        padding: 30px;
+      }
+
+      .dt-card-content h2,
+      .dt-bg-content h2,
+      .dt-split-title h2,
+      .dt-center-content h2 {
+        font-size: 2rem;
+      }
+
+      .dt-split-title {
+        padding: 40px 0 20px;
+      }
+
+      .dt-split-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <div class="header">
+    <ul class="nav">
+      <div class="navbiankuang"></div>
+      <li class="logo">
+        <h1><a href="index.html">天下大同</a></h1>
+      </li>
+      <li class="nav-item"><a href="index.html">首页</a></li>
+      <li class="nav-item active"><a href="scenic spot.html">景点</a>
+        <ul class="nav2">
+          <li><a href="histroy-jingdian.html">历史文化类</a></li>
+          <!-- <li><a href="#">自然风光类</a></li> -->
+          <!-- <li><a href="#">古建筑类</a></li> -->
+          <li><a href="hongse-jingdian.html">红色旅游类</a></li>
+          <!-- <li><a href="#">农业生态类</a></li> -->
+        </ul>
+      </li>
+      <li class="nav-item"><a href="food.html">美食</a>
+        <ul class="nav2">
+          <li><a href="food-noodles.html">经典面食</a></li>
+          <li><a href="food-meat.html">肉类菜肴</a></li>
+          <li><a href="food-liangfen.html">凉粉与冷食</a></li>
+          <!-- <li><a href="#youzha">油炸食品</a></li> -->
+        </ul>
+      </li>
+      <li class="nav-item"><a href="minfeng.html">风俗</a>
+        <!-- <ul class="nav2"> -->
+        <!-- <li><a href="#">文化历史</a></li> -->
+        <!-- <li><a href="#">文化意义</a></li> -->
+        <!-- </ul> -->
+      </li>
+      <li class="nav-item"><a href="product.html">文创</a>
+        <!-- <ul class="nav2"> -->
+        <!-- <li><a href="#">设计理念</a></li>
+            <li><a href="#">文化背景</a></li>
+            <li><a href="#">购买</a></li> -->
+        <!-- </ul> -->
+      </li>
+      <li><a href="lianxi.html">联系我们</a></li>
+      <span class="sign-in"><a href="zhuce.html"></a></span>
+    </ul>
+  </div>
+  <!-- 导航栏 -->
+  <!-- Banner 区域 - 只保留图片变化效果 -->
+  <section class="dt-banner"></section>
+
+  <!-- 景点内容区域 -->
+  <!-- 景点1 - 左边图片右边文字 -->
+  <section class="dt-section" style="background-color: #f9f5f0;">
+    <div class="dt-section-content">
+      <div class="dt-attraction-card">
+        <div class="dt-card-img"></div>
+        <div class="dt-card-content">
+          <h2>大同煤矿"万人坑"遗址纪念馆</h2>
+          <p>大同煤矿"万人坑"遗址是日本侵华期间残害中国矿工的铁证，记录了数万矿工被残酷剥削致死的血泪历史。纪念馆通过大量实物、图片和雕塑，真实再现了那段黑暗岁月，警示后人勿忘国耻。</p>
+          <p>馆内设有"苦难岁月"、"不屈抗争"、"铭记历史"三大展区，完整展示了矿工们的悲惨遭遇和顽强抗争。遗址区保存完好的尸骨坑更是震撼人心，每年吸引大量游客前来凭吊。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 景点2 - 全宽背景图右上文字 -->
+  <section class="dt-section" style="padding: 0;">
+    <div class="dt-attraction-bg">
+      <div class="dt-bg-content">
+        <h2>平型关大捷纪念馆</h2>
+        <p>平型关大捷是八路军出师抗日后的第一个大胜仗，打破了日军"不可战胜"的神话。纪念馆位于灵丘县白崖台乡，完整保留了当年战场遗址和指挥所。</p>
+        <p>馆内陈列着大量珍贵文物和历史照片，通过声光电等现代技术生动再现了这场著名伏击战的整个过程。游客可以参观林彪、聂荣臻等将领的指挥所，感受当年八路军将士的英勇智慧。</p>
+        <p>纪念馆周围群山环绕，地势险要，实地考察更能体会当年战斗的艰险与将士们的英勇。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 景点3 - 标题在上方，全宽图片，下方文字 -->
+  <section class="dt-section" style="padding: 0; width: 100vw; margin-left: calc(-50vw + 50%);">
+    <div class="dt-attraction-split">
+      <div class="dt-split-title">
+        <h2>大同革命烈士陵园</h2>
+      </div>
+      <div class="dt-split-img-container">
+        <div class="dt-split-img"></div>
+      </div>
+      <div class="dt-split-content">
+        <p>大同革命烈士陵园始建于1952年，安葬着抗日战争、解放战争和大同保卫战中牺牲的1200多名革命烈士。陵园依山而建，松柏环绕，庄严肃穆。</p>
+        <p>主纪念碑高29.5米，象征着中国共产党从成立到新中国成立走过的29年半光辉历程。碑身镌刻"革命烈士永垂不朽"八个鎏金大字，在阳光下熠熠生辉。</p>
+        <p>每年清明和烈士纪念日，社会各界都会前来祭扫，缅怀先烈。陵园已成为大同市重要的爱国主义教育基地，承载着对革命先烈的无限敬仰与深切怀念。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 景点4 - 全宽背景图中间文字半透明背景 -->
+  <section class="dt-section" style="padding: 0;">
+    <div class="dt-attraction-center">
+      <div class="dt-center-content">
+        <h2>大同白求恩特种外科医院旧址</h2>
+        <p>大同白求恩特种外科医院是抗日战争时期由国际主义战士白求恩大夫参与创建的战地医院，为八路军伤员提供医疗救护服务。旧址位于大同市灵丘县，完整保留了当年的手术室、病房等设施。</p>
+        <p>医院在极其艰苦的条件下开展救治工作，白求恩大夫在此创造了多项战地医疗技术，救治了大量伤员。展馆内陈列着白求恩使用过的医疗器械、手术台等珍贵文物。</p>
+        <p>这里不仅是重要的红色教育基地，也是中加友谊的见证。游客可以了解白求恩大夫"毫不利己、专门利人"的崇高精神，感受国际友人对中国抗战的无私援助。</p>
+      </div>
+    </div>
+  </section>
+  <!-- <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-social">
+        <div class="social-item">
+          <div class="social-icon">微</div>
+          <div>官方微信</div>
+        </div>
+        <div class="social-item">
+          <div class="social-icon">微</div>
+          <div>官方微博</div>
+        </div>
+        <div class="social-item">
+          <div class="social-icon">淘</div>
+          <div>文创淘宝</div>
+        </div>
+        <div class="social-item">
+          <div class="social-icon">信</div>
+          <div>大同微店</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">故宫博物院</a>
+        <a href="#">中国国家博物馆</a>
+        <a href="#">官方网站</a>
+        <a href="#">数据研究院</a>
+        <a href="#">龙门石窟</a>
+        <a href="#">爱彩山石窟</a>
+        <a href="#">大理石湖研究院</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">网站地图</a>
+        <a href="#">法律声明</a>
+      </div>
+
+      <div class="footer-info">
+        <p>Copyright &copy; 2021 云冈石窟 All Rights Reserved. 晋ICP备05008816号-1</p>
+        <p>网站建设：北京分形科技</p>
+        <p class="visitor-count">网站浏览人数：<span id="visitorCount">1,024,568</span></p>
+      </div>
+    </div>
+  </footer> -->
+  <script>
+    // 监听滚动事件，添加动画类
+    document.addEventListener('DOMContentLoaded', function () {
+      const animateElements = [
+        ...document.querySelectorAll('.dt-card-img, .dt-card-content'),
+        ...document.querySelectorAll('.dt-bg-content'),
+        ...document.querySelectorAll('.dt-split-title, .dt-split-img, .dt-split-content'),
+        ...document.querySelectorAll('.dt-center-content')
+      ];
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('dt-animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+
+</html>

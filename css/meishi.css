@@ -1,0 +1,75 @@
+.di {
+    position: relative;
+    margin: 0 auto;
+    height: 350px;
+    width: 1100px;
+    background: url(../upload/卷轴.png) no-repeat;
+    background-size: 1100px 390px;
+    color: #504328;
+}
+
+.di .food {
+    float: left;
+    position: absolute;
+    top: 78px;
+    left: 170px;
+    width: 300px;
+    height: 220px;
+
+}
+
+.di .food img {
+
+    width: 300px;
+    height: 220px;
+}
+
+.di .food-cont {
+    width: 440px;
+    height: 220px;
+
+
+    position: absolute;
+    top: 78px;
+    right: 170px;
+}
+
+.di .food-cont h2 {
+    text-align: center;
+    height: 46px;
+    line-height: 46px;
+    font-size: 22px;
+}
+
+.di .food-cont p {
+    font-size: 14px;
+    text-indent: 28px;
+}
+
+.body {
+    overflow: hidden;
+
+}
+
+.body-hd {
+    text-align: center;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.line {
+    margin: 0 20px 0 20px;
+    display: inline-block;
+    width: 200px;
+    height: 3px;
+    background-color: #b29c6d;
+    line-height: 50px;
+}
+
+.title {
+
+    font-size: 30px;
+    color: #9c8147;
+    font-weight: 700;
+    line-height: 50px;
+}

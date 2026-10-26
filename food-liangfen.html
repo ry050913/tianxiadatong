@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大同</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lingxing.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- 侧边栏 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --sn-primary-color: #8B4513;
+      --sn-secondary-color: #F5DEB3;
+      --sn-accent-color: #A0522D;
+      --sn-text-color: #333;
+      --sn-light-color: #FFF8DC;
+    }
+
+
+    /* 新增的banner样式 */
+    .dt-banner {
+      height: 850px;
+      width: 100%;
+      background-image: url('images/冷食类banner.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+      position: relative;
+    }
+
+    .dt-banner-content {
+      text-align: center;
+      z-index: 2;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    .dt-banner h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .dt-banner p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    /* .dt-banner::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    } */
+
+    body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--sn-light-color);
+      color: var(--sn-text-color);
+      line-height: 1.6;
+      background: url('images/food-bg2.jpg') center/cover;
+    }
+
+    .sn-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .sn-header {
+      /* background: linear-gradient(135deg, var(--sn-primary-color), var(--sn-accent-color)); */
+      color: rgb(79, 53, 43);
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 0 0 20px 20px;
+      /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+
+    .sn-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* background: url('images/banner1.png') center/cover; */
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    .sn-header h1 {
+      padding-top: 70px;
+      position: relative;
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      letter-spacing: 2px;
+    }
+
+    .sn-header p {
+      position: relative;
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 20px auto 0;
+    }
+
+    /* 新版美食板块样式 */
+    .sn-food-section {
+      margin: 60px 0;
+      position: relative;
+    }
+
+    .sn-food-section::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--sn-accent-color), transparent);
+    }
+
+    .sn-food-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .sn-food-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--sn-primary-color);
+      margin-right: 20px;
+      min-width: 60px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sn-food-title {
+      font-size: 2rem;
+      color: var(--sn-primary-color);
+      margin: 0;
+      position: relative;
+      display: inline-block;
+    }
+
+    .sn-food-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sn-accent-color), transparent);
+    }
+
+    .sn-food-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .sn-food-image {
+      flex: 1;
+      min-width: 300px;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .sn-food-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .sn-food-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .sn-food-details {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      position: relative;
+      z-index: 1;
+    }
+
+    .sn-food-details::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 2px dashed var(--sn-secondary-color);
+      border-radius: 20px;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    .sn-food-description {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .sn-food-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .sn-feature-card {
+      background: var(--sn-secondary-color);
+      padding: 10px 15px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .sn-feature-card i {
+      margin-right: 8px;
+      color: var(--sn-accent-color);
+    }
+
+    .sn-food-history {
+      background: rgba(245, 222, 179, 0.3);
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 4px solid var(--sn-accent-color);
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    /* 交替布局 */
+    .sn-food-section:nth-child(even) .sn-food-content {
+      flex-direction: row-reverse;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .sn-food-content {
+        flex-direction: column;
+      }
+
+      .sn-food-section:nth-child(even) .sn-food-content {
+        flex-direction: column;
+      }
+
+      .sn-food-image,
+      .sn-food-details {
+        min-width: 100%;
+      }
+
+      .sn-header h1 {
+        font-size: 2rem;
+      }
+
+      .sn-food-title {
+        font-size: 1.5rem;
+      }
+
+      /* 响应式banner调整 */
+      .dt-banner {
+        height: 500px;
+      }
+
+      .dt-banner h1 {
+        font-size: 2.5rem;
+      }
+
+      .dt-banner p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- 导航栏 -->
+    <div class="header">
+      <ul class="nav">
+        <div class="navbiankuang"></div>
+        <li class="logo">
+          <h1><a href="index.html">天下大同</a></h1>
+        </li>
+        <li class="nav-item"><a href="index.html">首页</a></li>
+        <li class="nav-item"><a href="scenic spot.html">景点</a>
+          <ul class="nav2">
+            <li><a href="histroy-jingdian.html">历史文化类</a></li>
+            <!-- <li><a href="#">自然风光类</a></li> -->
+            <!-- <li><a href="#">古建筑类</a></li> -->
+            <li><a href="hongse-jingdian.html">红色旅游类</a></li>
+            <!-- <li><a href="#">农业生态类</a></li> -->
+          </ul>
+        </li>
+        <li class="nav-item active"><a href="food.html">美食</a>
+          <ul class="nav2">
+            <li><a href="food-noodles.html">经典面食</a></li>
+            <li><a href="food-meat.html">肉类菜肴</a></li>
+            <li><a href="food-liangfen.html">凉粉与冷食</a></li>
+            <!-- <li><a href="#youzha">油炸食品</a></li> -->
+          </ul>
+        </li>
+        <li class="nav-item"><a href="minfeng.html">风俗</a>
+          <!-- <ul class="nav2">
+                      <li><a href="#">文化历史</a></li>
+                      <li><a href="#">文化意义</a></li>
+                  </ul> -->
+        </li>
+        <li class="nav-item"><a href="product.html">文创</a>
+          <!-- <ul class="nav2">
+                      <li><a href="#">设计理念</a></li>
+                      <li><a href="#">文化背景</a></li>
+                      <li><a href="#">购买</a></li>
+                  </ul> -->
+        </li>
+        <li><a href="lianxi.html">联系我们</a></li>
+        <span class="sign-in"><a href="zhuce.html"></a></span>
+      </ul>
+    </div>
+    <!-- 导航栏 -->
+
+    <!-- 新增的banner部分 -->
+    <div class="dt-banner">
+      <div class="dt-banner-content">
+        <!-- <h1>大同美食文化</h1>
+        <p>千年面食之都，晋北美食天堂</p> -->
+      </div>
+    </div>
+
+    <header class="sn-header">
+      <h1>塞北冷食双璧</h1>
+      <p>晋北地区消暑美食的千年传承与夏日风情</p>
+    </header>
+
+    <div class="sn-container">
+      <!-- 大同凉粉 -->
+      <section class="sn-food-section">
+        <div class="sn-food-header">
+          <div class="sn-food-number">01</div>
+          <h2 class="sn-food-title">大同凉粉</h2>
+        </div>
+        <div class="sn-food-content">
+          <div class="sn-food-image">
+            <img src="images/大同凉粉.jpg" alt="大同凉粉">
+          </div>
+          <div class="sn-food-details">
+            <div class="sn-food-description">
+              <p>大同凉粉以土豆淀粉或绿豆淀粉为原料，经过传统工艺制作而成。成品晶莹剔透，口感爽滑筋道。搭配特制的辣椒油、香醋、蒜泥和黄瓜丝，酸辣开胃，是夏季街头最常见的小吃。</p>
+              <p>特色吃法：当地人喜欢将凉粉切成条状，加入腌制的胡萝卜丝和豆芽，再浇上秘制酱料，最后撒上一把香菜，色香味俱全。</p>
+            </div>
+            <div class="sn-food-features">
+              <div class="sn-feature-card">
+                <i class="fas fa-utensils"></i> 爽滑口感
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-pepper-hot"></i> 香辣风味
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-history"></i> 百年传统
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-map-marker-alt"></i> 大同特色
+              </div>
+            </div>
+            <div class="sn-food-history">
+              <p>"大同凉粉起源于明代，最初是矿工们的便携食品，后因其清凉解暑的特性，逐渐成为夏季街头巷尾的流行小吃。"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 浑源凉粉 -->
+      <section class="sn-food-section">
+        <div class="sn-food-header">
+          <div class="sn-food-number">02</div>
+          <h2 class="sn-food-title">浑源凉粉</h2>
+        </div>
+        <div class="sn-food-content">
+          <div class="sn-food-image">
+            <img src="images/浑源凉粉.jpg" alt="浑源凉粉">
+          </div>
+          <div class="sn-food-details">
+            <div class="sn-food-description">
+              <p>浑源凉粉以其独特的制作工艺和口感闻名，已被列入非物质文化遗产。选用优质豌豆淀粉，经过"七搅八晾"的传统工序制成，口感更加Q弹有韧性。</p>
+              <p>浑源凉粉的调料更为讲究，除了常规调料外，还会加入当地特产的莲花豆和豆腐干，最后浇上用十几种香料熬制的卤汁，味道层次丰富，回味悠长。</p>
+            </div>
+            <div class="sn-food-features">
+              <div class="sn-feature-card">
+                <i class="fas fa-star"></i> 非遗技艺
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-cookie-bite"></i> Q弹口感
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-mortar-pestle"></i> 复杂工艺
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-award"></i> 地方名吃
+              </div>
+            </div>
+            <div class="sn-food-history">
+              <p>"浑源凉粉制作技艺传承已有300余年，'七搅八晾'工艺确保凉粉筋道不碎，2010年被列入山西省非物质文化遗产名录。"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 荞麦碗托 -->
+      <section class="sn-food-section">
+        <div class="sn-food-header">
+          <div class="sn-food-number">03</div>
+          <h2 class="sn-food-title">荞麦碗托</h2>
+        </div>
+        <div class="sn-food-content">
+          <div class="sn-food-image">
+            <img src="images/荞面碗托.jpg" alt="荞麦碗托">
+          </div>
+          <div class="sn-food-details">
+            <div class="sn-food-description">
+              <p>荞麦碗托是晋北地区的特色创新小吃，将传统荞面与现代吃法相结合。荞面糊倒入碗中蒸制，冷却后形成碗状，故称"碗托"。</p>
+              <p>食用时，将碗托切成条状，加入黄瓜丝、胡萝卜丝、豆芽等配菜，浇上特制的芝麻酱和辣椒油，荞面的清香与调料的浓郁完美融合，既健康又美味。</p>
+            </div>
+            <div class="sn-food-features">
+              <div class="sn-feature-card">
+                <i class="fas fa-heart"></i> 健康粗粮
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-lightbulb"></i> 创新吃法
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-bowl-food"></i> 独特造型
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-seedling"></i> 素食首选
+              </div>
+            </div>
+            <div class="sn-food-history">
+              <p>"荞麦碗托源于山区农民的智慧，利用当地盛产的荞麦，创造出这种既方便携带又能饱腹的食品，现已发展成为具有地方特色的美食。"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 凉拌苦菜 -->
+      <section class="sn-food-section">
+        <div class="sn-food-header">
+          <div class="sn-food-number">04</div>
+          <h2 class="sn-food-title">凉拌苦菜</h2>
+        </div>
+        <div class="sn-food-content">
+          <div class="sn-food-image">
+            <img src="images/凉拌苦菜.jpg" alt="凉拌苦菜">
+          </div>
+          <div class="sn-food-details">
+            <div class="sn-food-description">
+              <p>苦菜是晋北地区常见的野菜，具有清热解毒的功效。凉拌苦菜是夏季最受欢迎的时令小菜，微苦回甘，清爽解腻。</p>
+              <p>传统做法是将新鲜苦菜焯水后过凉，挤干水分切段，加入蒜末、盐、醋和少许辣椒油拌匀。现代创新做法还会加入核桃仁或花生碎，增加口感和营养。</p>
+            </div>
+            <div class="sn-food-features">
+              <div class="sn-feature-card">
+                <i class="fas fa-leaf"></i> 时令野菜
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-heartbeat"></i> 清热解毒
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-utensil-spoon"></i> 简单制作
+              </div>
+              <div class="sn-feature-card">
+                <i class="fas fa-clock"></i> 季节限定
+              </div>
+            </div>
+            <div class="sn-food-history">
+              <p>"凉拌苦菜在晋北地区有'春食苦，夏不苦'的民谚，体现了当地人'药食同源'的饮食智慧，是夏季餐桌上必不可少的养生小菜。"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-social">
+          <div class="social-item">
+            <div class="social-icon">微</div>
+            <div>官方微信</div>
+          </div>
+          <div class="social-item">
+            <div class="social-icon">微</div>
+            <div>官方微博</div>
+          </div>
+          <div class="social-item">
+            <div class="social-icon">淘</div>
+            <div>文创淘宝</div>
+          </div>
+          <div class="social-item">
+            <div class="social-icon">信</div>
+            <div>大同微店</div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">故宫博物院</a>
+          <a href="#">中国国家博物馆</a>
+          <a href="#">官方网站</a>
+          <a href="#">数据研究院</a>
+          <a href="#">龙门石窟</a>
+          <a href="#">爱彩山石窟</a>
+          <a href="#">大理石湖研究院</a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">网站地图</a>
+          <a href="#">法律声明</a>
+        </div>
+
+        <div class="footer-info">
+          <p>Copyright &copy; 2021 云冈石窟 All Rights Reserved. 晋ICP备05008816号-1</p>
+          <p>网站建设：北京分形科技</p>
+          <p class="visitor-count">网站浏览人数：<span id="visitorCount">1,024,568</span></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 侧边栏 -->
+  <nav class="sidebar">
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="#jingdian-bottom" class="nav-link">
+          <i class="fas fa-university nav-icon"></i>
+          <span class="nav-text">名胜古迹</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#food-bottom" class="nav-link">
+          <i class="fas fa-utensils nav-icon"></i>
+          <span class="nav-text">风味美食</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#culture-bottom" class="nav-link">
+          <i class="fas fa-hands-praying nav-icon"></i>
+          <span class="nav-text">民风民俗</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#wenchuang-bottom" class="nav-link">
+          <i class="fas fa-palette nav-icon"></i>
+          <span class="nav-text">文创精品</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#top" class="nav-link">
+          <i class="fas fa-arrow-up nav-icon"></i>
+          <span class="nav-text">返回顶部</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+<script>
+
+
+</script>
+
+</html>

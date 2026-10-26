@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大同</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <!-- 侧边栏 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- food -->
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="font_wr55sxo22/iconfont.css">
+</head>
+
+<body>
+    <div>
+        <!-- 导航栏 -->
+        <div class="header">
+            <ul class="nav">
+                <div class="navbiankuang"></div>
+                <li class="logo">
+                    <h1><a href="index.html">天下大同</a></h1>
+                </li>
+                <li class="nav-item"><a href="index.html">首页</a></li>
+                <li class="nav-item"><a href="scenic spot.html">景点</a>
+                    <ul class="nav2">
+                        <li><a href="histroy-jingdian.html">历史文化类</a></li>
+                        <!-- <li><a href="#">自然风光类</a></li> -->
+                        <!-- <li><a href="#">古建筑类</a></li> -->
+                        <li><a href="hongse-jingdian.html">红色旅游类</a></li>
+                        <!-- <li><a href="#">农业生态类</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="food.html">美食</a>
+                    <ul class="nav2">
+                        <li><a href="food-noodles.html">经典面食</a></li>
+                        <li><a href="food-meat.html">肉类菜肴</a></li>
+                        <li><a href="food-liangfen.html">凉粉与冷食</a></li>
+                        <!-- <li><a href="#youzha">油炸食品</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="minfeng.html">风俗</a>
+                    <!-- <ul class="nav2">
+                        <li><a href="#">文化历史</a></li>
+                        <li><a href="#">文化意义</a></li>
+                    </ul> -->
+                </li>
+                <li class="nav-item active"><a href="product.html">文创</a>
+                    <!-- <ul class="nav2">
+                        <li><a href="#">设计理念</a></li>
+                        <li><a href="#">文化背景</a></li>
+                        <li><a href="#">购买</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="lianxi.html">联系我们</a></li>
+                <span class="sign-in"><a href="zhuce.html"></a></span>
+            </ul>
+        </div>
+        <!-- 导航栏 -->
+
+        <!-- banner -->
+        <div class="banner-container">
+            <!-- <img src="images/banner3.png" alt="大同美食" class="banner-image"> -->
+            <div class="mask">
+                <h1 class="title">大同巧工</h1>
+            </div>
+        </div>
+        <!-- banner -->
+        <!-- body部分 -->
+        <div class="body">
+            <div class="container">
+
+
+                <div class="category-nav-container">
+                    <button class="carousel-btn prev">❮</button>
+                    <button class="carousel-btn next">❯</button>
+
+                    <nav class="category-nav">
+                        <!-- 分类导航 -->
+                        <div class="category-wrapper active">
+                            <div class="category-item" data-category="全部">全部</div>
+                        </div>
+                        <div class="category-wrapper">
+                            <div class="category-item" data-category="热销榜">热销榜</div>
+                        </div>
+                        <div class="category-wrapper">
+                            <div class="category-item" data-category="新品榜">新品榜</div>
+                        </div>
+                        <div class="category-wrapper">
+                            <div class="category-item" data-category="好评榜">好评榜</div>
+                        </div>
+                        <div class="category-wrapper">
+                            <div class="category-item" data-category="冰箱贴">冰箱贴</div>
+                        </div>
+                        <div class="category-wrapper">
+                            <div class="category-item" data-category="玩偶">玩偶</div>
+                        </div>
+                        <div class="category-wrapper">
+                            <div class="category-item" data-category="挂件">挂件</div>
+                        </div>
+                        <div class="category-wrapper">
+                            <div class="category-item" data-category="摆件">摆件</div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- 搜索框 -->
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="搜索文创产品..." id="searchInput">
+                    <i class="fas fa-search search-icon" id="searchButton"></i>
+                </div>
+            </div>
+            <!-- 产品展示区 -->
+            <div class="products-container" id="productsContainer"></div>
+
+        </div>
+
+        <!-- Font Awesome 图标库 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <!-- body部分 -->
+
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-social">
+                    <div class="social-item">
+                        <div class="social-icon">微</div>
+                        <div>官方微信</div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">博</div>
+                        <div>官方微博</div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">淘</div>
+                        <div>文创淘宝</div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">信</div>
+                        <div>大同微店</div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">故宫博物院</a>
+                    <a href="#">中国国家博物馆</a>
+                    <a href="#">官方网站</a>
+                    <a href="#">数据研究院</a>
+                    <a href="#">龙门石窟</a>
+                    <a href="#">爱彩山石窟</a>
+                    <a href="#">大理石湖研究院</a>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">网站地图</a>
+                    <a href="#">法律声明</a>
+                </div>
+
+                <div class="footer-info">
+                    <p>Copyright &copy; 2021 云冈石窟 All Rights Reserved. 晋ICP备05008816号-1</p>
+                    <p>网站建设：北京分形科技</p>
+                    <p class="visitor-count">网站浏览人数：<span id="visitorCount">1,024,568</span></p>
+                </div>
+            </div>
+        </footer>
+        <!-- 侧边栏 -->
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#spots" class="nav-link">
+                        <i class="iconfont icon-computer nav-icon"></i>
+                        <span class="nav-text">预约门票</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#food" class="nav-link">
+                        <i class="iconfont icon-lianxiwomen nav-icon"></i>
+                        <span class="nav-text">联系我们</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#top" class="nav-link">
+                        <i class="fas fa-arrow-up nav-icon"></i>
+                        <span class="nav-text">返回顶部</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+</body>
+<script>
+    // 产品数据
+    const productsData = {
+        "全部": [
+            { name: "北魏蓝色冠金属水箱贴有AR特效", price: "¥84", sell: "已售300+", image: "url('upload/北魏蓝色冠金属水箱贴有AR特效.png')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" },
+            { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "大同文创佛宝儿娃娃二代铜制水音铃铛(送环保包装 壳+挂绳+挂饰）", price: "¥32", sell: "已售200+", image: "url('upload/大同文创佛宝儿娃娃二代铜制水音铃铛(送环保包装 壳+挂绳+挂饰）.jpg')" },
+            { name: "龙凤花钗金冠冰箱贴", price: "¥88", sell: "已售300+", image: "url('upload/龙凤花钗金冠冰箱贴.jpg')" },
+            { name: "云冈石窟击掌佛打卡陶瓷水箱贴旅游纪念 伴手礼", price: "¥35", sell: "已售400+", image: "url('upload/云冈石窟击掌佛打卡陶瓷水箱贴旅游纪念 伴手礼.jpg')" },
+            { name: "木质山西冰箱贴", price: "¥46", sell: "已售300+", image: "url('upload/木质山西冰箱贴.jpg')" },
+            { name: "悬空寺创意冰箱贴", price: "¥66", sell: "已售500+", image: "url('upload/悬空寺创意冰箱贴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "天天好运冰箱贴", price: "¥32", sell: "已售200+", image: "url('upload/天天好运冰箱贴.jpg')" },
+            { name: "獬豸冰箱贴", price: "¥41", sell: "已售300+", image: "url('upload/獬豸冰箱贴.jpg')" },
+            { name: "端午民俗传统金属烤漆磁吸冰箱贴", price: "¥35", sell: "已售400+", image: "url('upload/端午民俗传统金属烤漆磁吸冰箱贴.jpg')" },
+            { name: "行李牌(金代琉璃吼、托莲飞天、云冈大 佛、漏齿菩萨)", price: "¥84", sell: "已售300+", image: "url('upload/行李牌(金代琉璃吼、托莲飞天、云冈大 佛、漏齿菩萨).jpg')" },
+            { name: "大同金属冰箱贴九龙壁悬空寺云冈石窟山西原创旅游 文创纪念品", price: "¥36.9", sell: "已售500+", image: "url('upload/大同金属冰箱贴九龙壁悬空寺云冈石窟山西原创旅游 文创纪念品.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "善化寺广目天王显眼包冰箱贴", price: "¥32", sell: "已售200+", image: "url('upload/善化寺广目天王显眼包冰箱贴.png')" },
+            { name: "大同创意镂空皮质景区打卡本", price: "¥32.8", sell: "已售300+", image: "url('upload/大同创意镂空皮质景区打卡本.jpg')" },
+            { name: "大同煤矿工人煤个蛋可滑动磁吸文创金属水 箱贴旅游纪念品", price: "¥58", sell: "已售400+", image: "url('upload/大同煤矿工人煤个蛋可滑动磁吸文创金属水 箱贴旅游纪念品.jpg')" },
+            { name: "神话悟空冰箱贴可爱悟空金棒可转动", price: "¥39", sell: "已售300+", image: "url('upload/神话悟空冰箱贴可爱悟空金棒可转动.jpg')" },
+            { name: "山西古建琉璃獬豸摆件", price: "¥88", sell: "已售400+", image: "url('upload/山西古建琉璃獬豸摆件.jpg')" }
+        ],
+        "热销榜": [
+            { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" },
+            { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" }
+        ],
+        "新品榜": [
+            { name: "善化寺广目天王显眼包冰箱贴", price: "¥32", sell: "已售200+", image: "url('upload/善化寺广目天王显眼包冰箱贴.png')" },
+            { name: "大同创意镂空皮质景区打卡本", price: "¥32.8", sell: "已售300+", image: "url('upload/大同创意镂空皮质景区打卡本.jpg')" },
+            { name: "神话悟空冰箱贴可爱悟空金棒可转动", price: "¥39", sell: "已售300+", image: "url('upload/神话悟空冰箱贴可爱悟空金棒可转动.jpg')" },
+            { name: "山西古建琉璃獬豸摆件", price: "¥88", sell: "已售400+", image: "url('upload/山西古建琉璃獬豸摆件.jpg')" },
+            { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" }
+        ],
+        "好评榜": [
+            { name: "北魏蓝色冠金属水箱贴有AR特效", price: "¥84", sell: "已售300+", image: "url('upload/北魏蓝色冠金属水箱贴有AR特效.png')" },
+            { name: "龙凤花钗金冠冰箱贴", price: "¥88", sell: "已售300+", image: "url('upload/龙凤花钗金冠冰箱贴.jpg')" },
+            { name: "云冈石窟击掌佛打卡陶瓷水箱贴旅游纪念 伴手礼", price: "¥35", sell: "已售400+", image: "url('upload/云冈石窟击掌佛打卡陶瓷水箱贴旅游纪念 伴手礼.jpg')" },
+            { name: "悬空寺创意冰箱贴", price: "¥66", sell: "已售500+", image: "url('upload/悬空寺创意冰箱贴.jpg')" }, { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" }
+        ],
+        "冰箱贴": [
+            { name: "北魏蓝色冠金属水箱贴有AR特效", price: "¥84", sell: "已售300+", image: "url('upload/北魏蓝色冠金属水箱贴有AR特效.png')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" },
+            { name: "龙凤花钗金冠冰箱贴", price: "¥88", sell: "已售300+", image: "url('upload/龙凤花钗金冠冰箱贴.jpg')" },
+            { name: "云冈石窟击掌佛打卡陶瓷水箱贴旅游纪念 伴手礼", price: "¥35", sell: "已售400+", image: "url('upload/云冈石窟击掌佛打卡陶瓷水箱贴旅游纪念 伴手礼.jpg')" }, { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" }
+        ],
+        "玩偶": [
+            { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "大同文创佛宝儿娃娃二代铜制水音铃铛", price: "¥32", sell: "已售200+", image: "url('upload/大同文创佛宝儿娃娃二代铜制水音铃铛(送环保包装 壳+挂绳+挂饰）.jpg')" }, { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" },
+            { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" }
+        ],
+        "挂件": [
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "大同文创佛宝儿娃娃二代铜制水音铃铛", price: "¥32", sell: "已售200+", image: "url('upload/大同文创佛宝儿娃娃二代铜制水音铃铛(送环保包装 壳+挂绳+挂饰）.jpg')" }, { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" },
+            { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" }
+        ],
+        "摆件": [
+            { name: "大同创意镂空皮质景区打卡本", price: "¥32.8", sell: "已售300+", image: "url('upload/大同创意镂空皮质景区打卡本.jpg')" }, { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" }, { name: "山西大同文创佛小伴", price: "¥69", sell: "已售10000+", image: "url('upload/山西大同文创佛小伴.jpg')" },
+            { name: "煤个蛋勇士挂件", price: "¥79", sell: "已售10000+", image: "url('upload/煤个蛋勇士挂件.jpg')" },
+            { name: "悬空寺金属流沙冰箱贴", price: "¥49", sell: "已售10000+", image: "url('upload/悬空寺金属流沙冰箱贴.jpg')" },
+            { name: "大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅行纪念品", price: "¥68", sell: "已售500+", image: "url('upload/大同文创华严寺屋顶鸱吻冰箱贴创意树脂冰箱贴旅 行纪念品.jpg')" }
+        ]
+    };
+
+    // 当前显示的产品类别
+    let currentCategory = "全部";
+    // 当前搜索关键词
+    let currentSearchTerm = "";
+
+    // DOM元素
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const categoryNav = document.querySelector('.category-nav');
+    const productsContainer = document.getElementById('productsContainer');
+
+    // 初始化页面
+    document.addEventListener('DOMContentLoaded', () => {
+        // 显示初始产品
+        showProducts(currentCategory);
+
+        // 设置分类导航点击事件
+        setupCategoryNav();
+
+        // 设置搜索功能
+        setupSearch();
+    });
+
+    // 设置分类导航
+    function setupCategoryNav() {
+        document.querySelectorAll('.category-wrapper').forEach(wrapper => {
+            wrapper.addEventListener('click', function () {
+                if (this.classList.contains('active')) return;
+
+                document.querySelectorAll('.category-wrapper').forEach(w => w.classList.remove('active'));
+                this.classList.add('active');
+
+                currentCategory = this.querySelector('.category-item').dataset.category;
+                currentSearchTerm = ""; // 重置搜索词
+                searchInput.value = ""; // 清空搜索框
+                showProducts(currentCategory);
+            });
+        });
+
+        // 轮播控制
+        document.querySelector('.prev').addEventListener('click', () => {
+            categoryNav.scrollBy({ left: -1000, behavior: 'smooth' });
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            categoryNav.scrollBy({ left: 1000, behavior: 'smooth' });
+        });
+    }
+
+    // 设置搜索功能
+    function setupSearch() {
+        // 点击搜索按钮
+        searchButton.addEventListener('click', performSearch);
+
+        // 按回车键搜索
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // 输入时实时搜索（可选，性能考虑可以不加）
+        // searchInput.addEventListener('input', performSearch);
+    }
+
+    // 执行搜索
+    function performSearch() {
+        currentSearchTerm = searchInput.value.trim().toLowerCase();
+        showProducts(currentCategory);
+    }
+
+    // 显示产品函数
+    function showProducts(category) {
+        // 获取当前类别的所有产品
+        let products = productsData[category] || [];
+
+        // 如果有搜索词，过滤产品
+        if (currentSearchTerm) {
+            products = products.filter(product =>
+                product.name.toLowerCase().includes(currentSearchTerm) ||
+                (product.price && product.price.toLowerCase().includes(currentSearchTerm))
+            );  // 这里补上了缺失的右括号和分号
+        }
+
+        // 生成HTML
+
+        // 生成HTML
+        let html = '';
+        if (products.length > 0) {
+            html = products.map((product, index) => `
+            <div class="product-card" style="--index: ${index}" onclick="window.location.href='beiweilanse.html'">
+                <div class="product-image" style="background-image: ${product.image}"></div>
+                <div class="product-info">
+                    <a href="beiweilanse.html" title="${product.name}">${product.name}</a>
+                    <span style="font-size:24px;margin:30px 10px;color:var(--primary-color);">
+                        ${product.price}
+                    </span><span style="font-size:14px;margin:20px 10px;color:#7c7c7c;">
+                        ${product.sell}
+                    </span></br>
+                    
+                    <button class="buy-btn">立即收藏</button>
+                </div>
+            </div>
+        `).join('');
+        } else {
+            // 没有搜索结果时显示提示
+            html = '<div class="no-results">没有找到相关产品，请尝试其他关键词</div>';
+        }
+
+        productsContainer.innerHTML = html;
+
+        // 设置收藏按钮交互
+        setupBuyButtons();
+
+        // 初始化观察器
+        setupScrollAnimation();
+    }
+    // 设置收藏按钮
+    function setupBuyButtons() {
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation(); // 阻止事件冒泡
+                this.textContent = "✓ 已加入购物车";
+                this.style.background = "#a11b00";
+                setTimeout(() => {
+                    this.textContent = "立即收藏";
+                    this.style.background = "#9e662a";
+                }, 2000);
+            });
+        });
+    }
+
+    // 设置滚动动画观察器
+    function setupScrollAnimation() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 观察所有产品卡片并设置延迟
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.05}s`;
+            observer.observe(card);
+        });
+    }
+    // 页面加载时初始化
+    document.addEventListener('DOMContentLoaded', () => {
+        showProducts('全部');
+    });
+
+
+    // 侧边栏
+    // 滚动显示控制
+    window.addEventListener('scroll', function () {
+        const sidebar = document.querySelector('.sidebar');
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollPosition > 300) { // 滚动超过300px显示
+            sidebar.classList.add('visible');
+        } else {
+            sidebar.classList.remove('visible');
+        }
+    });
+
+    // 返回顶部功能
+    document.querySelector('[href="#top"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    // 侧边栏结束
+
+
+</script>
+
+</html>

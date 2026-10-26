@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山西大同文创 - 云冈石窟纪念盘</title>
+    <!-- <link rel="stylesheet" href="font_zemypjwo0i/iconfont.css"> -->
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?61tpud');
+            src: url('fonts/icomoon.eot?61tpud#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?61tpud') format('truetype'),
+                url('fonts/icomoon.woff?61tpud') format('woff'),
+                url('fonts/icomoon.svg?61tpud#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: url('images/producteachbg.jpg') no-repeat;
+            background-size: 100% 100%;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 顶部导航栏样式 */
+        .top-bar {
+            background: #fffef8;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .nav-back {
+            margin-left: 10px;
+            color: #585353;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+
+        }
+
+        .nav-back i {
+            font-family: 'icomoon';
+            font-style: normal;
+        }
+
+        .icon {
+            font-family: 'icomoon';
+            font-style: normal;
+        }
+
+        .nav-back:hover {
+            color: #562f23;
+            font-weight: bold;
+            transform: translateX(-3px);
+
+        }
+
+        .nav-title {
+            font-size: 56px;
+            color: #5a1010;
+            font-weight: 600;
+            font-family: '华文行楷';
+        }
+
+        /* 搜索框样式 */
+        .search-box {
+            flex: 0 1 400px;
+            /* margin: 0 30px; */
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 25px;
+            border: 1px solid #e6e6e6;
+            transition: all 0.3s;
+        }
+
+        .search-box:hover {
+            border-color: #b22222;
+            box-shadow: 0 2px 8px rgba(178, 34, 34, 0.1);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #666;
+            outline: none;
+        }
+
+        .search-btn {
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .search-btn:hover {
+            color: #b22222;
+            transform: scale(1.1);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 1200px) {
+            .search-box {
+                flex-basis: 300px;
+                margin: 0 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .search-box {
+                order: 3;
+                flex: 1 0 100%;
+                margin: 10px 0 0;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* 搜索框样式结束 */
+
+        .nav-service {
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #fef7e3;
+            text-decoration: none;
+            color: #666;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+            margin-right: 10px;
+            border-color: #ffe77a;
+        }
+
+        .nav-service:hover {
+            background: #b22222;
+            color: white;
+            border-color: #ffffff;
+        }
+
+        .nav-service i {
+            font-size: 16px;
+            margin-right: 6px;
+        }
+
+        /* 字体图标（需自行引入图标库或替换为实际图标）*/
+        @font-face {
+            font-family: "iconfont";
+            src: url('//at.alicdn.com/t/c/font_1234567_abcdefghijk.eot');
+            src: url('//at.alicdn.com/t/c/font_1234567_abcdefghijk.eot?#iefix') format('embedded-opentype'),
+                url('//at.alicdn.com/t/c/font_1234567_abcdefghijk.woff2') format('woff2'),
+                url('//at.alicdn.com/t/c/font_1234567_abcdefghijk.woff') format('woff'),
+                url('//at.alicdn.com/t/c/font_1234567_abcdefghijk.ttf') format('truetype'),
+                url('//at.alicdn.com/t/c/font_1234567_abcdefghijk.svg#iconfont') format('svg');
+        }
+
+        .icon-search::before {
+            content: "\e603";
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-style: normal;
+        }
+
+        .icon-back::before {
+            content: "\e601";
+        }
+
+        .icon-service::before {
+            content: "\e602";
+        }
+
+        /* 顶部结束 */
+
+
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-container {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        /* 商品信息 */
+        .product-info {
+            flex: 1;
+            padding: 20px;
+            background: #fffef8;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-titile-h1,
+        .product-titile-h2 {
+            color: #7a4a33;
+            margin-bottom: 15px;
+        }
+
+        .product-titile-h1 {
+            font-size: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* 联系客服 */
+
+
+
+        /* 联系客服结束 */
+
+        .price {
+            color: #c00;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .description {
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin: 20px 0;
+            color: #666;
+        }
+
+        .quantity-control {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-control span {
+            margin-right: 10px;
+        }
+
+        .quantity-control button {
+            width: 30px;
+            height: 30px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .quantity-control input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .buy-btn {
+            background-color: #b22222;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 200px;
+
+        }
+
+        .favorite-btn1 {
+            background-color: #666;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            /* transition: background 0.3s; */
+            transition: all 0.3s ease;
+
+
+        }
+
+        .buy-btn:hover {
+            background-color: #8b0000;
+        }
+
+        .favorite-btn {
+            background-color: #666;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            /* transition: background 0.3s; */
+            transition: all 0.3s ease;
+            margin-left: 45%;
+
+        }
+
+
+
+        .favorite-btn:hover {
+            background-color: #555;
+        }
+
+        /* 弹窗样式 */
+        .modal-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-container {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 15px;
+            overflow: hidden;
+            animation: modalIn 0.3s ease-out;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .modal-top {
+            background: #fff9f2;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #b22222;
+        }
+
+        .modal-bottom {
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .detail-list {
+            list-style: none;
+            line-height: 1.8;
+
+        }
+
+        .detail-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .detail-list li span:first-child {
+            color: #666;
+            min-width: 100px;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        /* 成功弹窗 */
+        .success-modal {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .success-icon {
+            font-size: 50px;
+            color: #52c41a;
+            margin: 20px 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+            }
+
+            .magnifier-container {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .preview-area,
+            .zoom-area {
+                width: 100%;
+                height: 300px;
+            }
+
+            .product-info {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .price {
+                font-size: 24px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .buy-btn,
+            .favorite-btn {
+                width: 100%;
+            }
+        }
+
+        /* 放大镜 */
+        .f-container {
+            position: relative;
+            /* width: 800px; */
+            margin: 20px 20px;
+        }
+
+        .img-container {
+            position: relative;
+            width: 500px;
+            height: 375px;
+            float: left;
+            overflow: hidden;
+        }
+
+        #myimage {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .lens {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #fff;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: none;
+            display: none;
+            pointer-events: none;
+        }
+
+        .zoom-result {
+            position: absolute;
+            width: 600px;
+            /* 内容区域宽度 */
+            height: 450px;
+            /* 内容区域高度 */
+            left: 520px;
+            top: -38px;
+            display: none;
+            border: 1px solid #ccc;
+            /* 总宽度 = 600 + 2px边框 */
+            background-color: white;
+            background-repeat: no-repeat;
+        }
+
+        /* 收藏提示 */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            animation: toastIn 0.3s ease-out;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            display: flex;
+        }
+
+        @keyframes toastIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .toast-icon {
+            width: 20px;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+        }
+
+        /* 下半部分产品介绍  */
+        /* 新增样式 */
+        .product-details {
+            margin-top: 40px;
+            padding: 30px;
+            background: #fffef8;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .detail-section {
+            margin-bottom: 30px;
+        }
+
+        .box-title-tubiao {
+            width: 100%;
+            position: relative;
+            border-left: 4px solid #b22222;
+
+        }
+
+        .detail-title {
+            font-size: 24px;
+            color: #7a4a33;
+            padding-left: 40px;
+            margin: 25px 30px;
+
+        }
+
+        .tubiao {
+            margin-left: 16px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 40px;
+            height: 40px;
+            background: url('images/大同小图标.png') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .detail-title::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 11px;
+            width: 50px;
+            height: 2px;
+            background: #b22222;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        .spec-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .spec-label {
+            color: #666;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .spec-value {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .design-concept {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="%23f0f0f0" opacity="0.3">文化传承</text></svg>');
+            padding: 30px;
+            border-radius: 8px;
+            line-height: 1.8;
+            position: relative;
+            text-indent: 2em;
+        }
+
+        /* 新增评价样式 */
+        .reviews-section {
+            margin-top: 40px;
+        }
+
+        .review-card {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #b22222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .review-meta {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .review-form {
+            margin-top: 30px;
+            padding: 20px;
+            /* background: #ffffff; */
+            border-radius: 8px;
+        }
+
+        .review-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        /* 推荐商品 */
+        /* 推荐商品 */
+        .recommendations {
+            margin-top: 40px;
+        }
+
+
+
+        .recommend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            padding: 20px 0px;
+            margin-right: 70px;
+        }
+
+        .flower-box {
+            position: relative;
+        }
+
+        .border-flower {
+            position: absolute;
+            top: -19px;
+            left: -24px;
+
+            width: 291px;
+            height: 291px;
+        }
+
+        .border-flower img {
+            width: 100%;
+        }
+
+        .bg-color {
+            background-color: #fff8f890;
+            width: 249px;
+            height: 249px;
+            border-radius: 8px;
+        }
+
+        .bg-color:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .recommend-card {
+            position: relative;
+            overflow: hidden;
+            top: 10px;
+            left: 5px;
+            text-align: center;
+            border-radius: 50%;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 1/1;
+            width: 230px;
+            height: 230px;
+            /* margin: 0 auto; */
+            z-index: 100;
+            /* background-color: #3d0606; */
+        }
+
+        .recommend-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    rgba(255, 255, 255, 0) 20%,
+                    rgba(255, 255, 255, 0.8) 50%,
+                    rgba(255, 255, 255, 0) 80%);
+            transform: translateX(-100%) rotate(45deg);
+            opacity: 0;
+            z-index: 2;
+        }
+
+        .recommend-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recommend-card.in-view::before {
+            animation: lightSweep 1.2s ease-out forwards;
+        }
+
+        .recommend-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .recommend-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .recommend-card:hover .recommend-info {
+            opacity: 1;
+        }
+
+        .recommend-bg {
+            position: relative;
+            padding: 25px;
+            margin: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            width: 300px;
+            height: 350px;
+        }
+
+        .recommend-bg:hover {
+            transform: translateY(-10px);
+        }
+
+        .recommend-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            /* background: linear-gradient(to right,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.3) 50%,
+                    rgba(255, 255, 255, 0) 100%); */
+            transform: skewX(-45deg);
+            transition: left 0.6s;
+        }
+
+        @keyframes lightSweep {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .recommend-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+
+
+
+        .recommend-bg:hover::before {
+            left: 150%;
+        }
+
+
+        /* 评价 */
+        /* 在原有样式表中添加 */
+        .review-modal .rate-stars {
+            display: flex;
+            gap: 8px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+
+        .review-modal .star {
+            cursor: pointer;
+            font-size: 28px;
+            color: #ccc;
+            transition: all 0.2s ease;
+        }
+
+        .review-modal .star.active,
+        .review-modal .star:hover {
+            color: #ffc107;
+            transform: scale(1.2);
+        }
+
+        .review-modal textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 15px 0;
+            min-height: 100px;
+        }
+
+        /* 添加新样式 */
+        .char-counter {
+            position: relative;
+            color: #666;
+            margin: -10px 0 15px;
+            font-size: 14px;
+        }
+
+        .error-tip {
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+            background: #fff2f0;
+            color: #ff4d4f;
+            padding: 8px 12px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            animation: shake 0.4s ease;
+            white-space: nowrap;
+        }
+
+        .error-tip::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 15px;
+            border: 6px solid transparent;
+            border-top-color: #fff2f0;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0)
+            }
+
+            25% {
+                transform: translateX(5px)
+            }
+
+            75% {
+                transform: translateX(-5px)
+            }
+        }
+
+        textarea:focus+.char-counter .error-tip {
+            display: none !important;
+        }
+
+        /* 优化文本框样式 */
+        .review-form textarea {
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            padding: 15px;
+        }
+
+        /* 移除文本框加粗效果 */
+        .review-form textarea:focus {
+            border-width: 1px !important;
+            /* 保持原有边框粗细 */
+            box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.1);
+            outline: none;
+
+        }
+
+        /* 添加持久错误提示样式 */
+        .error-tip.persistent {
+            animation: none !important;
+            display: block !important;
+            opacity: 1 !important;
+        }
+
+
+
+        /* 优化提示样式 */
+        .error-tip {
+            background: #fff1f0;
+            border: 1px solid #ffccc7;
+            padding: 10px 15px;
+            border-radius: 8px;
+            bottom: calc(100% + 10px);
+            right: -10px;
+            animation: floatUp 0.4s ease both;
+        }
+
+        .error-tip::before {
+            border-top-color: #ffccc7;
+            right: 20px;
+        }
+
+        @keyframes floatUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 新增持续提示 */
+        .char-counter .persistent-tip {
+            display: none;
+            color: #ff4d4f;
+            margin-left: 10px;
+        }
+
+        textarea:invalid+.char-counter .persistent-tip {
+            display: inline-block;
+            animation: gentlePulse 1.5s infinite;
+        }
+
+        @keyframes gentlePulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0.6
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <div class="container">
+        <div class="top-bar">
+            <div class="nav-container">
+                <!-- 返回链接 -->
+                <a href="product.html" class="nav-back">
+                    <i></i>
+                    <span>返回</span>
+                </a>
+
+                <!-- 标题 -->
+                <h1 class="nav-title">大同巧工</h1>
+
+                <!-- 新增搜索框 -->
+                <div class="search-box">
+                    <input type="text" placeholder="搜索商品...">
+                    <button class="search-btn"><i class="fas fa-search search-icon" id="searchButton"></i></button>
+                </div>
+
+                <!-- 联系客服 -->
+                <a href="javascript:void(0);" class="nav-service">
+                    <i class="icon"></i>
+                    <span>联系客服</span>
+                </a>
+            </div>
+        </div>
+        <div class="product-container">
+            <!-- 图片放大镜区域 -->
+            <div class="f-container">
+                <div class="img-container">
+                    <img src="upload/北魏蓝色冠金属水箱贴有AR特效.png" id="myimage">
+                    <div class="lens"></div>
+                </div>
+                <div class="zoom-result"></div>
+            </div>
+            <!-- 商品信息区域 -->
+            <div class="product-info">
+                <h1 class="product-titile-h1">
+                    北魏蓝色冠金属水箱贴有AR特效
+
+                </h1>
+
+                <p class="price">¥ 84.00</p>
+                <p class="description">
+                    本品以世界文化遗产云冈石窟为设计蓝本，采用传统失蜡法铸造工艺精制而成。
+                    正面浮雕再现第20窟露天大佛的庄严法相，背面铭刻云冈石窟历史简介。
+                    配备胡桃木支架，兼具文化收藏价值和家居装饰功能。
+                </p>
+
+                <div class="quantity-control">
+                    <span>数量：</span>
+                    <button onclick="changeQuantity(-1)">-</button>
+                    <input type="number" value="1" min="1" max="10" id="quantity">
+                    <button onclick="changeQuantity(1)">+</button>
+                </div>
+
+                <div class="btn-group">
+                    <button class="buy-btn" onclick="handleBuy()">立即购买</button>
+                    <button class="favorite-btn1" onclick="addToFavorite()">加入收藏</button>
+                </div>
+            </div>
+        </div>
+        <!-- 下半部分产品介绍 -->
+        <div class="product-details">
+            <!-- 商品参数 -->
+            <div class="detail-section">
+                <div class="box-title-tubiao">
+                    <div class="tubiao"></div>
+                    <h3 class="detail-title">
+                        产品参数
+                    </h3>
+                </div>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-label">产品材质</div>
+                        <div class="spec-value">不锈钢 / 黄铜铸造</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">产品尺寸</div>
+                        <div class="spec-value">直径8~10cm / 厚12mm</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">包装尺寸</div>
+                        <div class="spec-value">260×260×60mm</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">产品重量</div>
+                        <div class="spec-value">净重850g / 毛重1200g</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 设计理念 -->
+            <div class="detail-section">
+                <div class="box-title-tubiao">
+                    <div class="tubiao"></div>
+                    <h3 class="detail-title">
+                        设计理念
+                    </h3>
+                </div>
+                <div class="design-concept">
+                    <p>北魏，作为中国历史上首个大规模融合胡汉文化的王朝，其冠冕不仅是权力与身份的象征，更是多元文明碰撞的结晶。云冈石窟的佛陀造像、司马金龙墓漆画中的贵族仪态、洛阳永宁寺遗址出土的残片纹样，无一不诉说着北魏对“庄严与神圣”的美学追求。设计团队以“冠冕”为切入点，因其浓缩了北魏等级制度、宗教观念与工艺审美——高耸的冠体象征通天之意，层叠的纹饰暗含佛教宇宙观，靛蓝主色则源自壁画中“天界”的意象，既呼应北方游牧民族对苍穹的崇拜，又融入中原礼制的沉稳。通过现代设计语言，将这一承载千年文明密码的符号提炼为日常物件，是对历史的凝练致敬，亦是对文化记忆的创造性唤醒。
+                    </p>
+                    <p>为平衡“文物复原”与“现代审美”，产品采用“金属立体浮雕+仿古做旧”工艺，以不锈钢或黄铜为基底，通过高精度激光雕刻复现冠冕的层叠结构，如卷云纹冠梁、忍冬纹边框、莲花形冠饰等典型元素。表面刻意保留细微蚀刻痕迹，模拟出土文物的岁月质感，而局部点缀的鎏金线条与珐琅点彩，则打破单一色调的沉闷，赋予其灵动华贵的气息——这一手法既还原了北魏工匠对“错彩镂金”的极致追求，又以当代极简美学重构古典繁复，形成“远观古朴，近赏精致”的视觉张力。
+                    </p>
+                    <p>传统文创往往止步于静态观赏，而此设计通过“AR增强现实”技术构建了一条跨越时空的交互通道：
+                        -
+                        动态解码历史：扫描图案后，3D建模的冠冕悬浮于屏幕，可逐层拆解结构，配以语音解说其形制等级（如皇帝通天冠、官员进贤冠之别）、纹样隐喻（忍冬象征轮回永生，莲花寓意净土超脱），让用户像考古学家般“解剖”文物背后的文明密码。
+                        -
+                        情境化叙事：用户可一键穿越至虚拟北魏场景——或置身平城宫殿参与帝王加冕仪典，或漫步云冈石窟见证工匠凿刻佛冠，甚至通过手势“点亮”冠冕上的纹饰，触发对应历史片段的微动画。这种“游戏化探索”模糊了学习与娱乐的边界，使文化传播更具黏性。
+                    </p>
+                    <p>此设计绝非简单的“文物复刻+科技嫁接”，而是一次对传统文化现代性转化的深度思考：
+                        - 于个体，它提供了一种低门槛、高趣味的文化亲近方式，让用户在把玩与互动中自然生发对北魏文明的好奇与认同；
+                        - 于产业，它探索了“严肃历史IP+轻量化产品+数字化交互”的文创开发范式，为博物馆资源活化提供新思路；
+                        - 于时代，它回应了“国潮3.0”阶段的需求升级——年轻人不再满足于符号堆砌，而是渴望兼具审美格调、知识含量与社交货币属性的文化消费。
+                    </p>
+                    <p>通过将冠冕从“帝王头顶”移至“生活角落”，以科技重燃沉睡千年的纹饰，这款产品最终实现了一场静默却震撼的宣言：历史从未死去，它只是等待被重新编码，在与现代文明的碰撞中，迸发新的生命力。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 用户评价 -->
+            <div class="reviews-section">
+                <div class="box-title-tubiao">
+                    <div class="tubiao"></div>
+                    <h3 class="detail-title">
+                        用户评价
+                    </h3>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">张</div>
+                    <div>
+                        <div class="review-meta">张** ｜ 2024-03-15</div>
+                        <p>实物比图片还要精美，放在书房案头特别有文化气息，包装非常用心！</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">王</div>
+                    <div>
+                        <div class="review-meta">王** ｜ 2024-03-12</div>
+                        <p>送给外国客户的商务礼品，对方非常喜欢，说是最有特色的中国礼物</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">张</div>
+                    <div>
+                        <div class="review-meta">张** ｜ 2024-03-15</div>
+                        <p>实物比图片还要精美，放在书房案头特别有文化气息，包装非常用心！</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">王</div>
+                    <div>
+                        <div class="review-meta">王** ｜ 2024-03-12</div>
+                        <p>送给外国客户的商务礼品，对方非常喜欢，说是最有特色的中国礼物</p>
+                    </div>
+                </div>
+                <div class="review-form">
+                    <h4>发表您的评价</h4>
+                    <textarea rows="4" placeholder="请输入您的评价..." oninput="updateCharCount(this)"></textarea>
+
+                    <div class="char-counter">
+                        <span class="count">0</span>/10
+                        <span class="persistent-tip">✋ 还需输入更多内容</span>
+                        <div class="error-tip" id="reviewError"></div>
+                    </div>
+                    <button class="favorite-btn" onclick="submitReview()">提交评价</button>
+                </div>
+            </div>
+
+            <!-- 推荐商品 -->
+            <div class="recommendations">
+                <div class="box-title-tubiao">
+                    <div class="tubiao"></div>
+                    <h3 class="detail-title">
+                        相关推荐
+                    </h3>
+                </div>
+                <div class="recommend-grid">
+                    <div class="recommend-bg">
+                        <div class="flower-box">
+                            <div class="border-flower">
+                                <img src="images/花纹.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bg-color">
+                            <div class="recommend-card">
+                                <img src="upload/佛小伴.jpg" class="recommend-img" alt="应县木塔书签">
+                                <div class="recommend-info">
+                                    <h4>佛小伴</h4>
+                                    <p>¥69</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-bg">
+                        <div class="flower-box">
+                            <div class="border-flower">
+                                <img src="images/花纹.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bg-color">
+                            <div class="recommend-card">
+                                <img src="upload/天天好运冰箱贴.jpg" class="recommend-img" alt="应县木塔书签">
+                                <div class="recommend-info">
+                                    <h4>天天好运冰箱贴</h4>
+                                    <p>¥32</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-bg">
+                        <div class="flower-box">
+                            <div class="border-flower">
+                                <img src="images/花纹.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bg-color">
+                            <div class="recommend-card">
+                                <img src="upload/龙凤花钗金冠冰箱贴.jpg" class="recommend-img" alt="应县木塔书签">
+                                <div class="recommend-info">
+                                    <h4>龙凤花钗金冠冰箱贴</h4>
+                                    <p>¥88</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-bg">
+                        <div class="flower-box">
+                            <div class="border-flower">
+                                <img src="images/花纹.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bg-color">
+                            <div class="recommend-card">
+                                <img src="upload/木质山西冰箱贴.jpg" class="recommend-img" alt="应县木塔书签">
+                                <div class="recommend-info">
+                                    <h4>木质山西冰箱贴</h4>
+                                    <p>¥68</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 下半部分产品介绍 结束-->
+    </div>
+    <!-- 在页面底部添加收藏提示 -->
+    <div class="toast" id="favoriteToast">
+        <div class="toast-icon"></div>
+        <span>已加入收藏夹</span>
+    </div>
+
+    <!-- 商品详情弹窗 -->
+    <div class="modal-mask" id="detailModal">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-top">
+                <h2 class="product-titile-h2">云冈石窟浮雕纪念盘</h2>
+                <p class="price">¥298.00</p>
+            </div>
+            <div class="modal-bottom">
+                <ul class="detail-list">
+                    <li><span>材质工艺</span><span>黄铜铸造 / 鎏金工艺</span></li>
+                    <li><span>产品尺寸</span><span>直径20cm / 厚1.2cm</span></li>
+                    <li><span>净重</span><span>约850g</span></li>
+                    <li><span>包装清单</span><span>纪念盘×1 / 实木支架×1 / 收藏证书×1</span></li>
+                    <li><span>创作团队</span><span>云冈研究院 × 大同文旅</span></li>
+                    <li><span>配送方式</span><span>顺丰包邮 / 保价运输</span></li>
+                    <li><span>售后服务</span><span>7天无理由 / 三年保修</span></li>
+                </ul>
+                <button class="buy-btn" onclick="showSuccessModal()" style="width:100%;margin-top:20px;">确认支付</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 修改成功弹窗的HTML部分 -->
+    <div class="modal-mask" id="successModal">
+        <div class="modal-container">
+            <div class="success-modal">
+                <div class="success-icon">✓</div>
+                <h2 class="product-titile-h2">购买成功！</h2>
+                <p>订单号：DG2023<span id="orderNo"></span></p>
+                <p>预计3个工作日内发货</p>
+                <button class="buy-btn" onclick="closeAllModal()"
+                    style="background:#52c41a;margin-top:20px;">确定</button>
+            </div>
+        </div>
+    </div>
+    <!-- 评价 -->
+    <div class="modal-mask" id="reviewModal">
+        <div class="modal-container" style="max-width:400px">
+            <div class="success-modal">
+                <div class="success-icon" style="color:#1890ff;font-size:42px">✉</div>
+                <h2 class="product-titile-h2">评价已提交！</h2>
+                <p>感谢您的宝贵评价</p>
+                <p>内容审核通过后展示</p>
+                <button class="buy-btn" onclick="closeAllModal()"
+                    style="background:#1890ff;margin-top:20px;padding:10px 30px">确定</button>
+            </div>
+        </div>
+    </div>
+    <!-- 评价结束 -->
+
+
+    <script>
+        //价格控制
+        // 在脚本开头添加单价常量
+        const UNIT_PRICE = 84;
+        //获取信息
+        function getProductSpec(specName) {
+            const specs = document.querySelectorAll('.spec-card');
+            for (let spec of specs) {
+                const label = spec.querySelector('.spec-label').textContent;
+                if (label.includes(specName)) {
+                    return spec.querySelector('.spec-value').textContent;
+                }
+            }
+            return '';
+        }
+        // 数量控制
+        function changeQuantity(delta) {
+            const input = document.getElementById('quantity');
+            let value = parseInt(input.value) + delta;
+            if (value < 1) value = 1;
+            if (value > 10) value = 10;
+            input.value = value;
+        }
+
+        // 收藏功能
+        // function addToFavorite() {
+        //     alert('已加入收藏夹');
+        // }
+        // 收藏功能
+        function addToFavorite() {
+            const toast = document.getElementById('favoriteToast');
+            // 显示提示
+            toast.classList.add('show');
+            // 3秒后自动隐藏
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+
+            // 按钮动画
+            const btn = document.querySelector('.favorite-btn');
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                btn.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+
+        // 修改handleBuy函数
+        // 修改handleBuy函数
+        function handleBuy() {
+            // 获取产品参数
+            const material = getProductSpec('产品材质');
+            const size = getProductSpec('产品尺寸');
+
+            // 更新详情弹窗中的参数显示
+            const detailList = document.querySelectorAll('.detail-list li');
+            detailList[0].lastElementChild.textContent = material;
+            detailList[1].lastElementChild.textContent = size;
+
+            // 获取当前数量
+            const quantity = parseInt(document.getElementById('quantity').value);
+            // 计算总价
+            const totalPrice = (UNIT_PRICE * quantity).toFixed(2);
+
+            // 更新详情弹窗价格
+            document.querySelector('#detailModal .price').textContent = `¥ ${totalPrice}`;
+            // 显示弹窗
+            document.getElementById('detailModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').style.display = 'none';
+        }
+
+        // 修改showSuccessModal函数
+        function showSuccessModal() {
+            // 获取当前数量
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const totalPrice = (UNIT_PRICE * quantity).toFixed(2);
+
+            // 更新成功弹窗信息
+            document.getElementById('orderNo').innerHTML =
+                `${Math.floor(Math.random() * 9000 + 1000)}<br>数量：${quantity}件<br>总价：¥${totalPrice}`;
+
+            document.getElementById('detailModal').style.display = 'none';
+            document.getElementById('successModal').style.display = 'flex';
+        }
+
+
+
+        function closeAllModal() {
+            document.querySelectorAll('.modal-mask').forEach(modal => {
+                modal.style.display = 'none';
+            });
+        }
+
+        // 点击遮罩层关闭
+        document.querySelectorAll('.modal-mask').forEach(modal => {
+            modal.addEventListener('click', function (e) {
+                if (e.target === this) this.style.display = 'none';
+            });
+        });
+
+        // 放大镜
+        const lens = document.querySelector('.lens');
+        const imgContainer = document.querySelector('.img-container');
+        const img = document.getElementById('myimage');
+        const result = document.querySelector('.zoom-result');
+        const zoom = 0.5;
+
+        img.onload = function () {
+            const containerRect = imgContainer.getBoundingClientRect();
+            const scale = Math.max(
+                containerRect.width / img.naturalWidth,
+                containerRect.height / img.naturalHeight
+            );
+
+            // 预计算背景尺寸
+            const bgWidth = img.naturalWidth * zoom;
+            const bgHeight = img.naturalHeight * zoom;
+            result.style.backgroundImage = `url("${img.src}")`;
+            result.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
+
+            imgContainer.addEventListener('mousemove', (e) => {
+                const displayedWidth = img.naturalWidth * scale;
+                const displayedHeight = img.naturalHeight * scale;
+                const imgXOffset = (containerRect.width - displayedWidth) / 2;
+                const imgYOffset = (containerRect.height - displayedHeight) / 2;
+
+                const mouseX = e.clientX - containerRect.left;
+                const mouseY = e.clientY - containerRect.top;
+
+                // 边界检测
+                if (mouseX < imgXOffset || mouseX > imgXOffset + displayedWidth ||
+                    mouseY < imgYOffset || mouseY > imgYOffset + displayedHeight) {
+                    lens.style.display = 'none';
+                    result.style.display = 'none';
+                    return;
+                }
+
+                lens.style.display = 'block';
+                result.style.display = 'block';
+
+                // 计算镜片位置
+                let lensLeft = mouseX - lens.offsetWidth / 2;
+                let lensTop = mouseY - lens.offsetHeight / 2;
+
+                // 限制镜片移动范围
+                lensLeft = Math.max(imgXOffset,
+                    Math.min(lensLeft, imgXOffset + displayedWidth - lens.offsetWidth));
+                lensTop = Math.max(imgYOffset,
+                    Math.min(lensTop, imgYOffset + displayedHeight - lens.offsetHeight));
+
+                lens.style.left = `${lensLeft}px`;
+                lens.style.top = `${lensTop}px`;
+
+                // 计算背景位置（使用clientWidth排除边框影响）
+                const centerX = (lensLeft + lens.offsetWidth / 2 - imgXOffset) / scale;
+                const centerY = (lensTop + lens.offsetHeight / 2 - imgYOffset) / scale;
+
+                let bgX = centerX * zoom - result.clientWidth / 2;   // 使用clientWidth
+                let bgY = centerY * zoom - result.clientHeight / 2; // 使用clientHeight
+
+                // 计算有效移动范围
+                const maxBgX = bgWidth - result.clientWidth;
+                const maxBgY = bgHeight - result.clientHeight;
+
+                // 双重边界限制
+                bgX = Math.max(0, Math.min(bgX, maxBgX > 0 ? maxBgX : 0));
+                bgY = Math.max(0, Math.min(bgY, maxBgY > 0 ? maxBgY : 0));
+
+                result.style.backgroundPosition = `-${bgX}px -${bgY}px`;
+            });
+
+            imgContainer.addEventListener('mouseleave', () => {
+                lens.style.display = 'none';
+                result.style.display = 'none';
+            });
+        };
+
+
+        //    下半部分产品 
+
+        // 修改后的提交验证逻辑
+        let isValidationShown = false;
+
+        function submitReview() {
+            const textarea = document.querySelector('.review-form textarea');
+            const errorTip = document.getElementById('reviewError');
+            const content = textarea.value.trim();
+
+            if (content.length < 10) {
+                // 显示持久提示
+                errorTip.innerHTML = `还需输入${10 - content.length}个字`;
+                errorTip.classList.add('persistent');
+                isValidationShown = true;
+
+                // 添加输入监听
+                textarea.addEventListener('input', function tempListener() {
+                    errorTip.classList.remove('persistent');
+                    isValidationShown = false;
+                    textarea.removeEventListener('input', tempListener);
+                });
+
+                return;
+            }
+
+            // 提交成功处理
+            errorTip.classList.remove('persistent');
+            isValidationShown = false;
+            document.getElementById('reviewModal').style.display = 'flex';
+            textarea.value = '';
+            updateCharCount(textarea);
+        }
+
+        // 优化后的字数统计
+        function updateCharCount(input) {
+            const counter = input.nextElementSibling.querySelector('.count');
+            const length = input.value.trim().length;
+
+            // 实时更新且不自动隐藏提示
+            counter.textContent = length;
+            counter.style.color = (length >= 10 || isValidationShown) ? '#52c41a' : '#ff4d4f';
+        }
+        // 新增Toast提示函数
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+            <div class="toast-icon"></div>
+            <span>${message}</span>
+        `;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.remove();
+                }, 3000);
+            }, 10);
+        }
+        // 评价结束
+
+        // 图片懒加载
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
+
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy-load");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function (lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+
+        // 推荐商品点击事件
+        document.querySelectorAll('.recommend-card').forEach(card => {
+            card.addEventListener('click', function () {
+                // 实际应跳转商品详情页，此处演示用alert
+                alert('即将跳转到商品详情页');
+            });
+        });
+
+
+        const recommendCards = document.querySelectorAll('.recommend-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    // 移除动画类以便下次触发
+                    setTimeout(() => {
+                        entry.target.classList.remove('in-view');
+                    }, 1200);
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        });
+
+        recommendCards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>

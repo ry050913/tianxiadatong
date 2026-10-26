@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>民风民俗</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/meifeng.css">
+</head>
+
+<body>
+    <div>
+        <!-- 导航栏 -->
+        <div class="header">
+            <ul class="nav">
+                <div class="navbiankuang"></div>
+                <li class="logo">
+                    <h1><a href="index.html">天下大同</a></h1>
+                </li>
+                <li class="nav-item1"><a href="index.html">首页</a></li>
+                <li class="nav-item1"><a href="scenic spot.html">景点</a>
+                    <ul class="nav2">
+                        <li><a href="histroy-jingdian.html">历史文化类</a></li>
+                        <!-- <li><a href="#">自然风光类</a></li> -->
+                        <!-- <li><a href="#">古建筑类</a></li> -->
+                        <li><a href="hongse-jingdian.html">红色旅游类</a></li>
+                        <!-- <li><a href="#">农业生态类</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item1"><a href="food.html">美食</a>
+                    <ul class="nav2">
+                        <li><a href="food-noodles.html">经典面食</a></li>
+                        <li><a href="food-meat.html">肉类菜肴</a></li>
+                        <li><a href="food-liangfen.html">凉粉与冷食</a></li>
+                        <!-- <li><a href="#youzha">油炸食品</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item1 active"><a href="minfeng.html">风俗</a>
+                    <!-- <ul class="nav2">
+                        <li><a href="#">文化历史</a></li>
+                        <li><a href="#">文化意义</a></li>
+                    </ul> -->
+                </li>
+                <li class="nav-item1"><a href="product.html">文创</a>
+                    <!-- <ul class="nav2">
+                        <li><a href="#">设计理念</a></li>
+                        <li><a href="#">文化背景</a></li>
+                        <li><a href="#">购买</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="lianxi.html">联系我们</a></li>
+                <span class="sign-in"><a href="zhuce.html"></a></span>
+            </ul>
+        </div>
+        <!-- 导航栏 -->
+        <!-- banner -->
+        <div class="banner-container">
+            <!-- <img src="images/banner3.png" alt="大同美食" class="banner-image"> -->
+            <div class="mask">
+                <h1 class="title">节庆习俗</h1>
+            </div>
+        </div>
+        <!-- banner -->
+        <div class="body">
+            <!-- 左侧导航 -->
+            <div class="nav-container">
+
+                <div class="nav-item active" onclick="scrollToSection(0)">
+                    <div class="nav-icon"></div>
+                    九曲灯阵
+                </div>
+                <div class="nav-item" onclick="scrollToSection(1)">
+                    <div class="nav-icon"></div>
+                    铁火流星
+                </div>
+                <div class="nav-item" onclick="scrollToSection(2)">
+                    <div class="nav-icon"></div>
+                    云冈社火
+                </div>
+                <div class="nav-item" onclick="scrollToSection(3)">
+                    <div class="nav-icon"></div>
+                    踢鼓秧歌
+                </div>
+                <div class="nav-item" onclick="scrollToSection(4)">
+                    <div class="nav-icon"></div>
+                    八音会
+                </div>
+                <div class="nav-item" onclick="scrollToSection(5)">
+                    <div class="nav-icon"></div>
+                    风华戏梦
+                </div>
+                <div class="nav-item" onclick="scrollToSection(6)">
+                    <div class="nav-icon"></div>
+                    云冈乐舞
+                </div>
+                <div class="nav-item" onclick="scrollToSection(7)">
+                    <div class="nav-icon"></div>
+                    庙会
+                </div>
+
+            </div>
+            <!-- 图片放大的按钮 -->
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="toolbar">
+                    <button class="tool-btn" onclick="zoomIn()" title="放大">+</button>
+                    <button class="tool-btn" onclick="zoomOut()" title="缩小">-</button>
+                    <button class="tool-btn" onclick="rotateImage()" title="旋转">↻</button>
+                    <button class="tool-btn" onclick="resetImage()" title="重置">↺</button>
+                </div>
+                <div class="modal-content">
+                    <img id="modalImg" class="modal-img" src="" alt="">
+                    <div id="caption" class="caption"></div>
+                </div>
+            </div>
+
+            <!-- 结束 -->
+            <!-- 右侧内容 -->
+            <div class="content-container">
+                <!-- 灯会 -->
+                <section class="section">
+                    <div class="text-content">
+                        <h2>🏮 九曲黄河灯阵</h2>
+                        <img src="upload/九曲黄河灯阵.jpg" alt="点击旋转图片" class="image-content" onclick="openModal(this)">
+                        <p>山西大同九曲黄河灯阵是黄河流域最具代表性的传统民俗文化瑰宝之一，其历史渊源可追溯至明代洪武年间，距今已有六百余年传承历史。这一气势恢宏的灯阵奇观融合了周易八卦的哲学智慧、古代军事阵法的精妙布局以及北方农耕文明的祈福传统，形成了独具特色的文化景观。灯阵整体呈正方形布局，严格按照"九宫八卦"的方位设置，以365盏油灯象征周天度数，对应一年365天，其中又细分为24组灯盏代表二十四节气，72盏辅灯象征七十二候，蕴含着古人"天人合一"的宇宙观。灯阵中央矗立着被称为"老杆"的天灯主杆，高达十余米，顶端装饰七星斗和五色旗，下设八卦祭台，四周以九曲回环的路径布置灯盏，总长度可达数千米，行走其间宛如在银河中穿梭。灯阵的制作工艺极为考究：灯座采用大同特产的澄泥烧制，灯碗选用透光性极佳的云母石片，灯油使用当地特产的胡麻油，灯芯则用新棉花手工捻制，点燃后灯火通明却不生黑烟。在当代传承中，这项民俗活动不断创新，如浑源县在保持传统油灯的基础上，引入环保LED灯带，通过智能控制系统实现灯光变幻，再现"黄河之水天上来"的壮美意境。2019年元宵节，大同市举办的九曲黄河灯阵活动吸引了十余万游客参与，创下单日参与人数最多的纪录。学者研究发现，这项活动不仅具有娱乐观赏价值，更是一部活态的传统文化教科书：灯阵路径暗合《孙子兵法》中的"九地之变"，灯盏排列体现《周易》"数往者顺，知来者逆"的哲学思想，转灯仪式则保留着古老的巫傩文化遗存。如今，九曲黄河灯阵已被列入山西省非物质文化遗产名录，成为大同冬季文化旅游的金字招牌。每年正月，当地还会举办配套的民俗展演，如晋北秧歌、威风锣鼓、民间社火等，让游客在转灯祈福的同时，全方位感受晋北文化的独特魅力。这项延续六百年的民俗盛事，正以其深厚的文化底蕴和与时俱进的创新表达，向世人展示着中华优秀传统文化的永恒魅力。
+                        </p>
+                    </div>
+
+                </section>
+
+                <!-- 打铁花 -->
+                <section class="section">
+                    <div class="text-content">
+                        <h2>🔥 铁火流星</h2>
+                        <img src="upload/打铁花.jpg" alt="点击旋转图片" class="image-content" onclick="openModal(this)">
+                        <p>大同打铁花是中国山西省大同市传承千年的民间绝技，起源于古代冶铁业的劳作实践。作为北方冶铁重镇，大同自汉代便以铁器闻名，铁匠们在锻造间隙偶然发现击打铁水迸溅火花的奇观，逐渐将这一现象演化为节庆祈福的独特艺术。唐宋时期，打铁花与民俗活动深度融合，至明清已成为元宵、庙会中驱邪纳吉的重要仪式，寄托着百姓对五谷丰登、生活红火的热切期盼。表演时，匠人需将生铁熔化成1600℃以上的炽热铁水，以浸湿的木勺舀起铁水凌空抛洒，另一人则用木板奋力击打，铁水瞬间在空中炸裂成万千金红色火花，如流星雨般倾泻而下，最高可绽放十余米，形成“火树银花不夜天”的震撼景象。为增强视觉效果，表演常与舞龙结合，铁花泼洒向舞动的龙身，宛如火龙腾空穿行于星雨之间，配合震天的锣鼓声，将节庆氛围推向高潮。这一技艺不仅展现了古代工匠的智慧与胆识——表演者需身着防火服精准掌控击打力度与角度，稍有不慎便可能被高温灼伤，更承载着深厚的人文内涵：它既是手工业文化的活态见证，也是社区凝聚力的象征，通过代代相传的协作表演强化着地方文化认同。2008年，大同打铁花被列入国家级非物质文化遗产名录，当地通过建立传习所、创新文旅融合表演等形式抢救性保护这一濒危技艺，如在云冈石窟、华严寺等景区推出融合灯光与传统击打技艺的实景演出，使其在当代焕发新生。如今，每逢元宵佳节或夏季文化节，大同古城墙下总聚集着慕名而来的游客，在安全距离外屏息凝望这场熔古铸今的视觉盛宴，感受铁与火碰撞中迸发的永恒生命力。大同打铁花，这门根植于中国晋北大地上的千年绝技，是铁与火共舞的惊世传奇，更是人类与自然力量对话的壮美诗篇。其起源可追溯至汉代大同作为“铁器之都”的辉煌岁月，铁匠们在炉火熊熊的作坊中，偶然发现淬炼铁器时飞溅的星火竟能划破暗夜，宛如天女散花。这一发现被赋予神秘色彩——古人认为铁乃“金精”，其迸发的炽热火花能驱散晦气，于是工匠们开始刻意将废铁熔炼至白炽状态，以柳木制成的“花棒”猛击铁水，让铁花如火山喷发般冲向苍穹。
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- 社火 -->
+                <section class="section">
+                    <div class="text-content">
+                        <h2>🐲 云冈社火</h2>
+                        <img src="upload/社火.png" alt="点击旋转图片" class="image-content" onclick="openModal(this)">
+                        <p>山西社火是根植于晋地乡土社会的一种传统民俗活动，广泛流传于山西全境及陕西、河北等邻近省份的部分地区，尤以晋中、晋南、晋北等地的表现形式最为丰富。其历史可追溯至先秦时期的“社祭”仪式，早期以酬神祈愿、驱邪纳吉为核心功能，随着农耕文明与民间信仰的融合，逐渐发展为兼具宗教性、娱乐性与艺术性的节庆习俗。活动多集中于农历正月，贯穿春节至元宵节期间，部分地区的庙会、丰收庆典或重大民俗节日亦有举行。表演形式包含高跷、舞龙、舞狮、旱船、竹马、秧歌、锣鼓、八音会、戏曲等数十种类型，其中“背棍”与“铁棍”最具地域独创性——背棍以成年表演者肩扛铁架，孩童立于架上演绎故事人物，形成“空中舞蹈”；铁棍则需多人协作抬动装饰华丽的木质台架，台上演员随行进节奏完成造型展示，二者皆以“悬空艺术”凸显惊险奇巧。表演题材广泛涵盖历史演义（如《三国演义》《杨家将》）、神话传说（如《白蛇传》《西游记》）、民间生活场景及吉祥符号（如“五谷丰登”“龙凤呈祥”），表演者通过浓墨重彩的脸谱、繁复夸张的服饰及程式化的肢体语言，传递忠孝节义、祈福禳灾等传统价值观念。社火的组织以村落或宗族为单位，通常由德高望重的“社首”统筹，村民自发参与筹备、排练与演出，活动资金多源于集体募捐或民间商会支持，这一过程不仅强化了社区认同，也维系了传统手工技艺（如彩扎、刺绣、脸谱绘制）的活态传承。21世纪以来，随着城镇化进程加速，山西社火的生存空间受到冲击，但通过非遗保护（如2008年“晋中社火”入选国家级非物质文化遗产）、文旅融合（如平遥中国年、太原庙会等节庆推广）及校园传承等举措，其文化内涵与表现形式得以创新性延续，成为观察中国北方农耕文明与民间艺术生态的重要窗口。
+                        </p>
+                    </div>
+
+                </section>
+
+                <section class="section">
+                    <div class="text-content">
+                        <h2>🥁 踢鼓秧歌</h2>
+                        <img src="upload/踢鼓秧歌.jpg" alt="点击旋转图片" class="image-content" onclick="openModal(this)">
+                        <p>山西大同踢鼓秧歌是晋北地区独具特色的传统民间舞蹈，尤以大同市及所辖阳高、广灵、灵丘等县区为传承核心，其历史可追溯至明代中后期，融合了古代边塞驻军的尚武遗风、民间秧歌的欢庆韵律及地方戏曲的表演元素，形成刚柔并济的艺术形态。据地方志记载，该舞蹈最初源于戍边将士操练间隙的娱乐活动及节庆时的社火表演，后逐渐吸收当地农耕文化中的祈福仪式与民俗审美，演变为集武术、舞蹈、音乐、戏剧于一体的综合性民间艺术。表演队伍按角色分为“踢鼓”与“拉花”两大群体：踢鼓者多为青壮年男性，身着仿明代兵勇的短打服饰，头扎红色或黄色英雄巾，腰系彩带，背负直径约30厘米的圆形战鼓，动作以高踢腿、腾空跃、击鼓旋身为特色，融合“扫堂腿”“飞脚”“鹞子翻身”等武术技巧，步伐刚健有力，鼓点节奏铿锵，展现边塞文化的豪迈气概；拉花则由女性或男扮女装者担任，身着绣花绸袄、百褶长裙，手持彩扇或绢帕，通过“云步”“颤肩”“扭腰”“摆扇”等细腻动作，配合踢鼓者的阳刚节奏，形成动静对比的视觉张力。表演程式分为“过街秧歌”与“场子秧歌”两类：前者为行进式表演，队伍以“一字长蛇阵”“双龙摆尾”等队形穿街走巷，鼓乐喧天，渲染节日氛围；后者为固定场地表演，通过“蛇蜕皮”“卷白菜心”“八卦阵”等复杂队形变换，穿插“霸王鞭”“丑角逗趣”等情节性段落，增强戏剧观赏性。伴奏乐器以大鼓、大锣、铙钹、镲为主，节奏分为“单槌鼓”“双槌鼓”“紧三槌”等不同板式，与舞蹈动作严丝合缝。服饰道具注重象征意义，如踢鼓者的红巾象征忠勇，拉花的牡丹绣纹寓意富贵，鼓面绘制的太极八卦图暗含阴阳调和之道。该舞蹈承载着晋北民众对历史上边关安宁、风调雨顺的集体记忆，现已成为大同市春节、元宵节社火游行的重头戏，并于2009年被列入山西省非物质文化遗产名录，近年来通过建立传承基地（如阳高县踢鼓秧歌传习所）、编入中小学乡土教材、参与“中国民间文化艺术之乡”展演等活动，实现活态传承与当代创新。
+                        </p>
+                    </div>
+
+                </section>
+
+                <section class="section">
+                    <div class="text-content">
+                        <h2>🎶 八音会</h2>
+                        <img src="upload/八音会.jpg" alt="点击旋转图片" class="image-content" onclick="openModal(this)">
+                        <p>山西大同八音会是晋北地区极具代表性的传统民间器乐演奏形式，主要流传于大同市及周边阳高、浑源、广灵等县域，其历史可追溯至明清时期，融合了古代军乐、宗教音乐、戏曲曲牌及地方民歌等多元艺术元素，形成以吹打乐为主、兼具仪式性与娱乐性的民间音乐文化。八音会名称源于中国古代“八音”分类法（金、石、丝、竹、匏、土、革、木），实际演奏乐器以唢呐、笙、管子、鼓、锣、镲、板胡、二胡等为主，其中唢呐为核心领奏乐器，依据曲目需求可灵活增减乐器组合。演奏者多为民间艺人，通过口传心授代代相传，传统上分为“文场”与“武场”：文场以唢呐、笙、管子等吹奏乐器演绎旋律，注重气息控制与装饰音运用；武场以鼓、锣、铙、镲等打击乐器掌握节奏，强调力度变化与声部配合，二者相辅相成形成“紧拉慢唱”的独特音响效果。曲目体系庞大，涵盖祭祀音乐（如《大得胜》《将军令》）、戏曲曲牌（如晋剧“乱弹”、耍孩儿“咳咳腔”）、民间小调（如《走西口》《挂红灯》）及即兴编创的“杂曲”，演奏时可根据场合灵活转换曲风，婚丧嫁娶、庙会庆典、社火游行等民俗活动均可见其身影。演奏形式分为坐乐与行乐：坐乐常见于固定场所，如戏台、庙宇或院落，以成套曲牌连奏展现技艺；行乐则用于节庆巡游，艺人边行进边演奏，配合秧歌、高跷等表演营造热闹氛围。技艺特色突出表现为唢呐的“循环换气”“滑音吐奏”、笙的“和音技法”、鼓的“花槌击打”等，尤以“双唢呐对奏”“鼓镲竞技”等互动形式最具观赏性。服饰道具注重实用与象征结合，艺人常着红黄两色对襟短衫，头扎白毛巾，乐器装饰彩绸或流苏，鼓面绘太极、龙凤等吉祥图案。大同八音会的传承与地域文化紧密关联：历史上因地处边塞，军屯文化与多民族交融赋予其粗犷豪放的风格；近代商贸繁荣促使音乐吸收晋商文化中的精致元素；当代则成为维系乡村社会关系的重要纽带，红白喜事中“请八音”既是礼仪传统，也彰显家族声望。
+                        </p>
+                    </div>
+
+                </section>
+
+                <section class="section">
+                    <div class="text-content">
+                        <h2>🎭 风华戏梦</h2>
+                        <img src="upload/戏曲.jpg" alt="点击旋转图片" class="image-content" onclick="openModal(this)">
+                        <p>山西大同戏曲是晋北地区传统戏剧文化的核心组成部分，涵盖耍孩儿、罗罗腔、北路梆子等多个独具特色的地方剧种，其发展深受边塞文化、多民族交融及商贸活动影响，形成粗犷豪放与细腻婉转并存的多元艺术风格。耍孩儿（又称“咳咳腔”）是大同最具代表性的古老剧种，起源于金元时期，以《狮子洞》《千里送京娘》等神话故事为主要题材，其最大特色在于演员使用“后嗓子”发声，演唱时喉部挤压发出类似“咳咳”的独特音效，配合“大弯大调”的拖腔，形成苍凉古朴的韵味；表演程式融合社火元素，如“扭腰甩臂”“踏步蹲身”等动作，伴奏以板胡、枚笛、四块瓦为主，打击乐突出“狗咬狗”锣鼓经的急促节奏，整体风格原始粗犷，被誉为戏曲“活化石”，2006年被列入首批国家级非物质文化遗产名录。罗罗腔是流行于灵丘、广灵等地的稀有剧种，源于明代弦索腔系，因主要伴奏乐器“罗罗”（形似唢呐）得名，唱腔以“数词”与“宫调”结合，旋律跳跃性强，代表剧目《小二姐做梦》《锦缎记》多表现市井生活，旦角“踩跷”技艺（绑木质小脚模拟缠足步态）与丑角插科打诨的表演形式极具民间趣味。北路梆子作为山西四大梆子之一，在大同地区发展出“云州调”分支，唱腔高亢激越，多用“嗨嗨腔”“花腔”等技巧，板式包括“夹板”“流水”“介板”等，传统剧目《王宝钏》《血手印》多演绎忠孝节义主题，武戏表演融入晋北武术招式，刀枪把子功与“喷火”“变脸”特技增强了观赏性。这些剧种历史上依托庙会、社火及晋商堂会传播，戏班常以“风搅雪”形式（不同剧种同台演出）适应观众需求，服饰道具兼具写实与象征，如耍孩儿的“五佛冠”头饰、北路梆子的“靠旗”武生装束均体现地域审美。20世纪中叶以来，大同戏曲面临传承断层、观众流失等挑战，但通过非遗保护（如建立耍孩儿传习所、罗罗腔艺术研究院）、剧目创新（如改编现代戏《乡村医生》《杏花酒翁》）、教育普及（进入大同艺校课程）及文旅融合（云冈文化旅游节展演）等措施逐步恢复生机，现有专业院团如大同市耍孩儿剧团、灵丘县罗罗腔剧团仍坚持常态化演出，民间自乐班活跃于乡村红白事及节庆活动，成为延续地方文化记忆、凝聚社区情感的重要载体。
+                        </p>
+                    </div>
+
+                </section>
+
+                <section class="section">
+                    <div class="text-content">
+                        <h2>💃 云冈乐舞</h2>
+                        <img src="upload/云冈乐舞.jpg" alt="点击旋转图片" class="image-content" onclick="openModal(this)">
+                        <p>山西大同云冈乐舞是以云冈石窟佛教艺术为根基、复原创作的古典乐舞形式，其灵感源于北魏时期（公元5-6世纪）石窟雕刻中的伎乐天、飞天及礼佛乐舞场景，融合鲜卑游牧文化、中原汉文化及西域佛教艺术元素，展现多元文明交融的历史风貌。云冈石窟现存500余尊乐舞伎雕像，手持箜篌、琵琶、筚篥、横笛、羯鼓等40余种乐器，舞姿或舒展飘逸或刚健有力，为现代复原提供了直观依据。20世纪80年代以来，大同市联合音乐史学者、舞蹈编导及文物专家，依据《魏书·乐志》记载与石窟图像考据，结合唐代《乐府杂录》、敦煌乐谱残卷等文献，系统复现北魏宫廷乐舞形态，形成“云冈乐舞”这一文化品牌。表演分为宫廷宴乐与佛教礼乐两类：前者以《魏王宴》《胡腾舞》为代表，再现鲜卑贵族宴饮场景，音乐采用“西凉乐”风格，以筚篥、五弦琵琶、方响为主奏乐器，舞蹈融合长袖折腰的汉风与腾跃旋转的胡舞；后者以《飞天伎乐》《千佛赞》为典型，模拟石窟浮雕中飞天奏乐、天女散花的宗教意境，舞者通过“三道弯”体态、佛手印及曼荼罗队形变化传递禅意，伴奏引入梵呗诵唱与钟磬之音。服饰设计参照石窟雕像，如飞天飘带、璎珞披帛、胡服窄袖，色彩以赭石、石青、鎏金为主，头饰多采用云纹金冠或莲花宝冠；乐器复原包括失传的雁柱箜篌、凤首箜篌及细腰羯鼓，装饰纹样取自忍冬纹、联珠纹等北魏典型图案。音乐结构上，宫廷乐突出节奏明快的鼓吹乐，礼佛乐侧重旋律悠长的丝竹乐，调式兼用汉族五声与西域七声音阶，形成“悲壮与空灵并存”的美学特质。云冈乐舞的现代演绎不仅服务于云冈文化旅游节、大同古城墙灯会等节庆活动，还承担文化遗产活态传承功能：2011年成立的大同市云冈乐舞团常态化开展驻场演出，并赴日本、法国等国家进行文化交流；云冈石窟研究院设立乐舞复原实验室，与中央音乐学院合作开展古谱破译与乐器复制；部分舞蹈动作被纳入地方中小学美育课程，培养青少年对传统艺术的认知。尽管面临古乐复原精度争议、市场化运营压力等挑战，云冈乐舞仍以“让石窟艺术动起来”为核心理念，通过数字多媒体技术（如全息投影结合真人表演）、沉浸式实景演出（如《云冈长歌》）等创新形式，持续拓展传统乐舞的当代表达空间，成为解读北魏历史、传播“一带一路”文明互鉴精神的重要文化载体。
+                        </p>
+                    </div>
+
+                </section>
+                <section class="section">
+                    <div class="text-content">
+                        <h2>📿庙会</h2>
+                        <img src="upload/庙会.jpg" alt="点击旋转图片" class="image-content" onclick="openModal(this)">
+                        <p>山西大同庙会是晋北地区最具代表性的传统民俗活动之一，主要依托寺庙宗教活动形成，兼具信仰祭祀、商贸交易、文化娱乐等多重功能，其历史可追溯至辽金时期，现存较著名的有华严寺庙会、关帝庙会、城隍庙会等十余处，每年从农历正月至腊月按固定会期轮替举办。庙会通常持续3至7天，以主祀神祇诞辰日为高潮，如四月初八华严寺浴佛节、五月十三关帝磨刀节等，形成"月月有庙会，季季有高潮"的民俗节律。活动内容分为三个层面：宗教仪式方面，包括僧人诵经、信众上香、抬神巡游等环节，尤以"绕佛"仪式最具特色，信众手持经幡沿寺庙中轴线顺时针绕行，形成绵延数百米的信仰长龙；商贸活动方面，庙前广场及周边街巷聚集上千摊位，形成牲畜市、农具市、布匹市、山货市等专业交易区，传统"以物易物"方式在偏远乡镇仍有保留，大同铜器、广灵剪纸、阳高杏脯等地方特产通过庙会渠道远销内蒙、河北；文娱展演方面，白天有八音会、踢鼓秧歌、高跷、舞狮等社火表演，夜间则上演晋剧、北路梆子、耍孩儿等地方戏曲，其中"对台戏"习俗最受群众欢迎——两座戏台相对而建，戏班通过加演绝活争夺观众，将宗教活动转化为全民狂欢。特殊饮食文化是庙会另一特色，浑源凉粉、广灵豆腐干、阳高羊肉汤等小吃集中亮相，佛教庙会必备的"素斋流水席"可同时接待数百香客。空间布局上，以寺庙为核心形成同心圆结构：内圈为宗教区，中圈为商贸区，外圈为娱乐区，这种"神圣-世俗"的空间叠合体现了民间信仰的实用主义特征。历史上，大同作为边塞重镇和佛教圣地，庙会促进了蒙、汉、回等多民族文化交流，如蒙古族那达慕的摔跤表演与汉族社火同场竞技，清真小吃摊与佛教素食区比邻而居。现代转型中，传统庙会面临宗教色彩淡化、同质化严重等问题，但通过非遗保护（如2013年"大同庙会习俗"列入市级非遗）、文旅融合（结合云冈文化旅游节设置分会场）和社区参与（居委会组织传统手工艺展销）等方式延续生命力，每年吸引游客超百万人次，成为展示边塞民俗、活化古城文化的重要平台。
+                        </p>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <div class="social-item">
+                    <div class="social-icon">微</div>
+                    <div>官方微信</div>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon">微</div>
+                    <div>官方微博</div>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon">淘</div>
+                    <div>文创淘宝</div>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon">信</div>
+                    <div>大同微店</div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">故宫博物院</a>
+                <a href="#">中国国家博物馆</a>
+                <a href="#">官方网站</a>
+                <a href="#">数据研究院</a>
+                <a href="#">龙门石窟</a>
+                <a href="#">爱彩山石窟</a>
+                <a href="#">大理石湖研究院</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">网站地图</a>
+                <a href="#">法律声明</a>
+            </div>
+
+            <div class="footer-info">
+                <p>Copyright &copy; 2021 云冈石窟 All Rights Reserved. 晋ICP备05008816号-1</p>
+                <p>网站建设：北京分形科技</p>
+                <p class="visitor-count">网站浏览人数：<span id="visitorCount">1,024,568</span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    // body部分开始
+
+    // 平滑滚动与导航高亮（优化滚动阈值）
+    function scrollToSection(index) {
+        const sections = document.querySelectorAll('.section');
+        sections[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        updateActiveNav(index);
+    }
+
+    function updateActiveNav(index) {
+        document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+        document.querySelectorAll('.nav-item')[index].classList.add('active');
+    }
+
+    // 增强型滚动监听
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('.section');
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+                updateActiveNav(index);
+            }
+        });
+    });
+
+    //body结束
+
+
+    //图片放大效果
+    let currentScale = 1;
+    let currentRotation = 0;
+
+    function openModal(img) {
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("modalImg");
+        const captionText = document.getElementById("caption");
+
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+
+        // 重置缩放和旋转
+        currentScale = 1;
+        currentRotation = 0;
+        updateImageTransform();
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    function zoomIn() {
+        currentScale += 0.2;
+        updateImageTransform();
+    }
+
+    function zoomOut() {
+        if (currentScale > 0.3) {
+            currentScale -= 0.2;
+            updateImageTransform();
+        }
+    }
+
+    function rotateImage() {
+        currentRotation += 90;
+        updateImageTransform();
+    }
+
+    function resetImage() {
+        currentScale = 1;
+        currentRotation = 0;
+        updateImageTransform();
+    }
+
+    function updateImageTransform() {
+        const modalImg = document.getElementById("modalImg");
+        modalImg.style.transform = `scale(${currentScale}) rotate(${currentRotation}deg)`;
+    }
+
+    // 点击模态框背景关闭
+    window.onclick = function (event) {
+        const modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    // 键盘快捷键支持
+    document.addEventListener('keydown', function (event) {
+        const modal = document.getElementById("myModal");
+        if (modal.style.display === "flex") {
+            switch (event.key) {
+                case 'Escape':
+                    closeModal();
+                    break;
+                case '+':
+                    zoomIn();
+                    break;
+                case '-':
+                    zoomOut();
+                    break;
+                case 'r':
+                    rotateImage();
+                    break;
+                case '0':
+                    resetImage();
+                    break;
+            }
+        }
+    });
+
+    //图片效果结束
+</script>
+
+</html>

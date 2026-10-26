@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山西大同面食文化</title>
+  <!-- <link rel="stylesheet" href="css/base.css"> -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <link rel="stylesheet" href="css/lingxing.css"> -->
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+  <!-- 侧边栏 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+  <style>
+    .food-noodles-body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      background-color: #f9f3e9;
+      color: #5a3e2a;
+      margin: 0;
+      padding: 0;
+      background: url('images/food-bg.jpg') no-repeat;
+      background-size: 101% 100%;
+    }
+
+    .dt-banner {
+      height: 850px;
+      width: 100%;
+      background-image: url('images/面食类banner.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .dt-banner h1 {
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .dt-noodle-container {
+      line-height: 30px;
+      text-indent: 2em;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+    }
+
+    .dt-noodle-title {
+      text-align: center;
+      color: #8b4513;
+      font-size: 2.5em;
+      margin-bottom: 50px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .dt-noodle-timeline {
+      position: absolute;
+      left: 53%;
+      top: 300px;
+      bottom: 50px;
+      width: 150px;
+      height: 1900px;
+      background: url(images/时间线2.png) no-repeat;
+      background-size: contain;
+      transform: translateX(-50%);
+      z-index: 1;
+      border-radius: 2px;
+      margin: 0 auto;
+    }
+
+    .dt-noodle-timeline::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 5px;
+      width: 20px;
+      height: 20px;
+      background-color: #8b4513;
+      border-radius: 50%;
+    }
+
+    .dt-noodle-item {
+      display: flex;
+      margin-bottom: 140px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .dt-noodle-item:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .dt-noodle-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .dt-noodle-content {
+      flex: 1;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid #d2b48c;
+      margin: 0 20px;
+    }
+
+    .dt-noodle-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      height: 300px;
+      margin: 0 20px;
+    }
+
+    .dt-noodle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border: 3px solid #fff;
+    }
+
+    .dt-noodle-subtitle {
+      color: #8b4513;
+      border-bottom: 2px dashed #d2b48c;
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .dt-noodle-dot {
+      position: absolute;
+      left: 50%;
+      width: 100px;
+      height: 40px;
+      background-color: #8b4513;
+      border-radius: 20px;
+      transform: translateX(-50%);
+      z-index: 3;
+      border: 3px solid #f9f3e9;
+    }
+
+    .dt-noodle-li1 {
+      left: 51%;
+    }
+
+    .dt-noodle-li2 {
+      left: 44%;
+    }
+
+    .dt-noodle-li3 {
+      left: 53%;
+    }
+
+    .dt-noodle-li4 {
+      left: 47%;
+    }
+
+    .dt-noodle-li5 {
+      left: 53%;
+    }
+
+    .dt-noodle-footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      color: #8b4513;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .dt-noodle-timeline {
+        left: 30px;
+      }
+
+      .dt-noodle-item,
+      .dt-noodle-item:nth-child(odd),
+      .dt-noodle-item:nth-child(even) {
+        flex-direction: column;
+        margin-left: 60px;
+      }
+
+      .dt-noodle-dot {
+        left: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <div class="header">
+    <ul class="nav">
+      <div class="navbiankuang"></div>
+      <li class="logo">
+        <h1><a href="index.html">天下大同</a></h1>
+      </li>
+      <li class="nav-item"><a href="index.html">首页</a></li>
+      <li class="nav-item"><a href="scenic spot.html">景点</a>
+        <ul class="nav2">
+          <li><a href="histroy-jingdian.html">历史文化类</a></li>
+          <!-- <li><a href="#">自然风光类</a></li> -->
+          <!-- <li><a href="#">古建筑类</a></li> -->
+          <li><a href="hongse-jingdian.html">红色旅游类</a></li>
+          <!-- <li><a href="#">农业生态类</a></li> -->
+        </ul>
+      </li>
+      <li class="nav-item active"><a href="food.html">美食</a>
+        <ul class="nav2">
+          <li><a href="food-noodles.html">经典面食</a></li>
+          <li><a href="food-meat.html">肉类菜肴</a></li>
+          <li><a href="food-liangfen.html">凉粉与冷食</a></li>
+          <!-- <li><a href="#youzha">油炸食品</a></li> -->
+        </ul>
+      </li>
+      <li class="nav-item"><a href="minfeng.html">风俗</a>
+        <!-- <ul class="nav2">
+                <li><a href="#">文化历史</a></li>
+                <li><a href="#">文化意义</a></li>
+            </ul> -->
+      </li>
+      <li class="nav-item"><a href="product.html">文创</a>
+        <!-- <ul class="nav2">
+                <li><a href="#">设计理念</a></li>
+                <li><a href="#">文化背景</a></li>
+                <li><a href="#">购买</a></li>
+            </ul> -->
+      </li>
+      <li><a href="lianxi.html">联系我们</a></li>
+      <span class="sign-in"><a href="zhuce.html"></a></span>
+    </ul>
+  </div>
+  <!-- 导航栏 -->
+  <!-- 新增的banner部分 -->
+  <div class="food-noodles-body">
+    <div class="dt-banner">
+      <!-- <h1>山西大同面食文化</h1> -->
+    </div>
+
+    <div class="dt-noodle-container">
+      <h1 class="dt-noodle-title">山西大同面食文化</h1>
+
+      <div class="dt-noodle-timeline"></div>
+
+      <!-- 刀削面 -->
+      <div class="dt-noodle-item" style="margin-top: 30px;">
+        <div class="dt-noodle-content">
+          <h2 class="dt-noodle-subtitle">刀削面</h2>
+          <p>刀削面是大同最著名的面食之一，以其独特的制作工艺闻名。厨师将面团托在左臂上，右手持特制的弧形刀，飞快地将面一片片削入沸水中。削出的面条中厚边薄，棱锋分明，形似柳叶，入口外滑内筋，软而不粘，越嚼越香。</p>
+          <p>刀削面的浇头多种多样，有西红柿鸡蛋、炸酱、羊肉臊子等，配上山西老陈醋，味道鲜美无比。刀削面不仅是一种美食，更是一门艺术，2008年被列入国家级非物质文化遗产名录。</p>
+        </div>
+        <div class="dt-noodle-image">
+          <img src="images/刀削面.jpg" alt="刀削面">
+        </div>
+        <div class="dt-noodle-dot dt-noodle-li1" style="top: 50%;"></div>
+      </div>
+
+      <!-- 抿八股 -->
+      <div class="dt-noodle-item">
+        <div class="dt-noodle-content">
+          <h2 class="dt-noodle-subtitle">抿八股</h2>
+          <p>抿八股是大同地区特有的传统面食，因制作时使用有八个孔的特制工具"抿床"而得名。将和好的面团放在抿床上，用手掌抿压，使面条从孔中挤出落入沸水中，形成短小的圆柱形面条。</p>
+          <p>抿八股口感滑嫩筋道，易于消化，常配以羊肉汤、豆腐、土豆等食材。这种面食制作简便快捷，是大同人家常便饭的代表，体现了山西人粗粮细作的饮食智慧。</p>
+        </div>
+        <div class="dt-noodle-image">
+          <img src="images/八股.jpg" alt="抿八股">
+        </div>
+        <div class="dt-noodle-dot dt-noodle-li2" style="top: 45%;"></div>
+      </div>
+
+      <!-- 莜面栲栳栳 -->
+      <div class="dt-noodle-item">
+        <div class="dt-noodle-content">
+          <h2 class="dt-noodle-subtitle">莜面栲栳栳</h2>
+          <p>莜面栲栳栳是大同地区极具特色的粗粮面食，主要原料是莜麦面。制作时将莜面搓成细条，再盘成小卷，形似蜂窝，故得名"栲栳栳"（当地方言称"蜂窝"为"栲栳"）。</p>
+          <p>莜面栲栳栳蒸熟后口感筋道，带有莜麦特有的香气，常配以羊肉臊子或酸菜汤食用。这种面食营养丰富，富含膳食纤维和微量元素，是健康养生的佳品。</p>
+        </div>
+        <div class="dt-noodle-image">
+          <img src="images/莜面栲栳栳.jpg" alt="莜面栲栳栳">
+        </div>
+        <div class="dt-noodle-dot dt-noodle-li3" style="top: 42%;"></div>
+      </div>
+
+      <!-- 块垒 -->
+      <div class="dt-noodle-item">
+        <div class="dt-noodle-content">
+          <h2 class="dt-noodle-subtitle">块垒</h2>
+          <p>块垒是大同地区独特的传统面食，又称"疙瘩汤"。制作时将面粉加水调成稠糊状，用筷子或勺子拨成不规则的小块直接下入沸水中煮熟，形状各异，大小不一，故称"块垒"。</p>
+          <p>块垒口感软糯，易于消化，常配以西红柿、土豆、豆腐等蔬菜做成汤食，是大同人冬季暖身的家常美食。这种面食制作简单快捷，体现了山西人粗粮细作、勤俭节约的饮食文化。</p>
+        </div>
+        <div class="dt-noodle-image">
+          <img src="images/块垒.jpg" alt="块垒">
+        </div>
+        <div class="dt-noodle-dot dt-noodle-li4" style="top: 48%;"></div>
+      </div>
+
+      <!-- 压豆面 -->
+      <div class="dt-noodle-item">
+        <div class="dt-noodle-content">
+          <h2 class="dt-noodle-subtitle">压豆面</h2>
+          <p>压豆面是大同地区的传统杂粮面食，以豌豆面和小麦面混合制成。制作时使用特制的压面床，将面团挤压成细长的面条直接入锅，面条呈淡黄色，带有豆类特有的香气。</p>
+          <p>压豆面口感滑爽筋道，营养丰富，蛋白质含量高，常配以羊肉汤或酸菜豆腐食用。这种面食体现了大同人善于利用杂粮、注重营养均衡的饮食智慧。</p>
+          <p>大同面食文化源远流长，这些特色面食不仅是当地人的日常饮食，更承载着丰富的历史文化内涵，展现了山西面食的多样性和独特魅力。</p>
+        </div>
+        <div class="dt-noodle-image">
+          <img src="images/压豆面.jpg" alt="压豆面">
+        </div>
+        <div class="dt-noodle-dot dt-noodle-li5" style="top: 45%;"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-social">
+          <div class="social-item">
+            <div class="social-icon">微</div>
+            <div>官方微信</div>
+          </div>
+          <div class="social-item">
+            <div class="social-icon">微</div>
+            <div>官方微博</div>
+          </div>
+          <div class="social-item">
+            <div class="social-icon">淘</div>
+            <div>文创淘宝</div>
+          </div>
+          <div class="social-item">
+            <div class="social-icon">信</div>
+            <div>大同微店</div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">故宫博物院</a>
+          <a href="#">中国国家博物馆</a>
+          <a href="#">官方网站</a>
+          <a href="#">数据研究院</a>
+          <a href="#">龙门石窟</a>
+          <a href="#">爱彩山石窟</a>
+          <a href="#">大理石湖研究院</a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">网站地图</a>
+          <a href="#">法律声明</a>
+        </div>
+
+        <div class="footer-info">
+          <p>Copyright &copy; 2021 云冈石窟 All Rights Reserved. 晋ICP备05008816号-1</p>
+          <p>网站建设：北京分形科技</p>
+          <p class="visitor-count">网站浏览人数：<span id="visitorCount">1,024,568</span></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

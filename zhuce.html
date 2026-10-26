@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云中大同 - 登录注册</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/zhuce.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 侧边栏 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="font_wr55sxo22/iconfont.css">
+</head>
+
+<body>
+
+    <!-- 返回按钮 -->
+    <div class="back-button" id="backButton">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="bg-animation"></div>
+    <div class="light-effect light-1"></div>
+    <div class="light-effect light-2"></div>
+    <div class="particles-container" id="particles-js"></div>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="images/zhucebiankuang1.png" class="zhucebiankuang1" alt="">
+            <img src="images/zhucebiankuang2.png" class="zhucebiankuang2" alt="">
+            <div class="logo-text">
+                <!-- <span class="logo-char" data-char="云">云</span>
+                <span class="logo-char" data-char="中">中</span>
+                <span class="logo-char" data-char="大">大</span>
+                <span class="logo-char" data-char="同">同</span> -->
+                <img src="images/logo3.png" alt="">
+
+            </div>
+            <div class="logo-subtitle">千年古都 · 天下大同</div>
+        </div>
+
+        <div class="form-container">
+
+            <div class="form-toggle">
+                <button class="toggle-btn active" id="login-toggle">登 录</button>
+                <button class="toggle-btn" id="register-toggle">注 册</button>
+            </div>
+
+            <form id="login-form" class="form-content active">
+                <div class="input-group">
+                    <input type="text" id="login-username" required>
+                    <label for="login-username">用户名</label>
+                    <div class="input-decoration">
+                        <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0,5 L100,5" stroke="#a69468" stroke-width="0.5" stroke-dasharray="5,2"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="login-password" required>
+                    <label for="login-password">密码</label>
+                    <div class="input-decoration">
+                        <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0,5 L100,5" stroke="#a69468" stroke-width="0.5" stroke-dasharray="5,2"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">登 录</button>
+
+                <div class="divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-text">或</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn wechat">
+                        <i class="fab fa-weixin"></i>
+                    </button>
+                    <button type="button" class="social-btn weibo">
+                        <i class="fab fa-weibo"></i>
+                    </button>
+                    <button type="button" class="social-btn qq">
+                        <i class="fab fa-qq"></i>
+                    </button>
+                </div>
+            </form>
+
+            <form id="register-form" class="form-content">
+                <div class="input-group">
+                    <input type="text" id="register-username" required>
+                    <label for="register-username">用户名</label>
+                    <div class="input-decoration">
+                        <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0,5 L100,5" stroke="#a69468" stroke-width="0.5" stroke-dasharray="5,2"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="register-email" required>
+                    <label for="register-email">电子邮箱</label>
+                    <div class="input-decoration">
+                        <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0,5 L100,5" stroke="#a69468" stroke-width="0.5" stroke-dasharray="5,2"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="register-password" required>
+                    <label for="register-password">密码</label>
+                    <div class="input-decoration">
+                        <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0,5 L100,5" stroke="#a69468" stroke-width="0.5" stroke-dasharray="5,2"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="register-confirm" required>
+                    <label for="register-confirm">确认密码</label>
+                    <div class="input-decoration">
+                        <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0,5 L100,5" stroke="#a69468" stroke-width="0.5" stroke-dasharray="5,2"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">注 册</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="cultural-elements">
+        <div class="element buddha"></div>
+        <div class="element hanging-temple"></div>
+        <div class="element dragon-wall"></div>
+        <div class="element huayan-pagoda"></div>
+        <div class="element city-wall"></div>
+        <div class="element cloud cloud-1"></div>
+        <div class="element cloud cloud-2"></div>
+    </div>
+    <!-- 侧边栏 -->
+    <nav class="sidebar">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="scenic spot.html" class="nav-link">
+                    <i class="fas fa-university nav-icon"></i>
+                    <span class="nav-text">名胜古迹</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="food.html" class="nav-link">
+                    <i class="fas fa-utensils nav-icon"></i>
+                    <span class="nav-text">美味佳肴</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="product.html" class="nav-link">
+                    <i class="fas fa-palette nav-icon"></i>
+                    <span class="nav-text">文创精品</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="lianxi.html" class="nav-link">
+                    <i class="iconfont icon-lianxiwomen nav-icon"></i>
+                    <span class="nav-text">联系我们</span>
+                </a>
+            </li>
+
+            <!-- <li class="nav-item">
+                <a href="#top" class="nav-link">
+                    <i class="fas fa-arrow-up nav-icon"></i>
+                    <span class="nav-text">返回顶部</span>
+                </a>
+            </li> -->
+        </ul>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 返回按钮功能
+            // 页面加载完成后执行
+            window.addEventListener('load', function () {
+                // 隐藏预加载器
+                document.querySelector('.preloader').style.opacity = '0';
+                document.querySelector('.preloader').style.pointerEvents = 'none';
+
+                // 显示页面内容
+                document.body.style.opacity = '1';
+
+                // 延迟执行动画，确保所有资源已加载
+                setTimeout(function () {
+                    // 这里放置您原来的动画初始化代码
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // 您原来的所有JavaScript代码...
+                    });
+                }, 100);
+
+                // 1秒后移除预加载器
+                setTimeout(function () {
+                    document.querySelector('.preloader').remove();
+                }, 1000);
+            });
+
+
+
+            document.getElementById('backButton').addEventListener('click', function () {
+                // 这里可以改为实际的返回逻辑
+                window.history.back();
+                // 或者跳转到指定页面
+                window.location.href = 'index.html';
+            });
+
+            // 增强版粒子效果
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: "#8a6d3b"
+                    },
+                    shape: {
+                        type: ["circle", "triangle"],
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
+                        },
+                        polygon: {
+                            nb_sides: 5
+                        }
+                    },
+                    opacity: {
+                        value: 0.3,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 1.5,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 2,
+                            size_min: 0.3,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#8a6d3b",
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 1.2,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: {
+                            enable: true,
+                            rotateX: 600,
+                            rotateY: 1200
+                        }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "grab"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 0.5
+                            }
+                        },
+                        push: {
+                            particles_nb: 4
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+
+            // 表单切换
+            const loginToggle = document.getElementById('login-toggle');
+            const registerToggle = document.getElementById('register-toggle');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const formToggle = document.querySelector('.form-toggle');
+
+            loginToggle.addEventListener('click', function () {
+                if (this.classList.contains('active')) return;
+
+                this.classList.add('active');
+                registerToggle.classList.remove('active');
+                formToggle.classList.remove('register-active');
+
+                registerForm.classList.remove('active');
+                setTimeout(() => {
+                    loginForm.classList.add('active');
+                }, 10);
+            });
+
+            registerToggle.addEventListener('click', function () {
+                if (this.classList.contains('active')) return;
+
+                this.classList.add('active');
+                loginToggle.classList.remove('active');
+                formToggle.classList.add('register-active');
+
+                loginForm.classList.remove('active');
+                setTimeout(() => {
+                    registerForm.classList.add('active');
+                }, 10);
+            });
+
+            // 输入框动画增强
+            const inputs = document.querySelectorAll('.input-group input');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    const label = this.nextElementSibling;
+                    label.style.color = '#8a6d3b';
+                    label.style.textShadow = '0 0 8px rgba(138, 109, 59, 0.2)';
+
+                    const decoration = this.parentElement.querySelector('.input-decoration');
+                    decoration.innerHTML = `
+            <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M0,5 L100,5" stroke="#8a6d3b" stroke-width="0.8" stroke-dasharray="0" stroke-linecap="round">
+                <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="0.6s" fill="freeze"/>
+              </path>
+            </svg>
+          `;
+                });
+
+                input.addEventListener('blur', function () {
+                    const label = this.nextElementSibling;
+                    if (!this.value) {
+                        label.style.color = 'rgba(74, 74, 74, 0.6)';
+                        label.style.textShadow = 'none';
+                    }
+                });
+            });
+
+            // Logo文字动画增强
+            const logoChars = document.querySelectorAll('.logo-char');
+            logoChars.forEach(char => {
+                char.addEventListener('mouseenter', function () {
+                    const originalChar = this.dataset.char;
+                    const randomOffset = Math.floor(Math.random() * 5) - 2;
+                    const newCharCode = originalChar.charCodeAt(0) + randomOffset;
+
+                    createParticles(this);
+
+                    this.textContent = String.fromCharCode(newCharCode);
+                    this.style.transform = 'translateY(-10px) rotateX(20deg)';
+                    this.style.textShadow = '0 10px 25px rgba(138, 109, 59, 0.3)';
+                });
+
+                char.addEventListener('mouseleave', function () {
+                    this.textContent = this.dataset.char;
+                    this.style.transform = 'translateY(0) rotateX(0)';
+                    this.style.textShadow = '0 0 10px rgba(138, 109, 59, 0.1)';
+                });
+            });
+
+            // 创建粒子效果函数
+            function createParticles(element) {
+                const rect = element.getBoundingClientRect();
+                const x = rect.left + rect.width / 2;
+                const y = rect.top + rect.height / 2;
+
+                for (let i = 0; i < 8; i++) {
+                    const particle = document.createElement('div');
+                    particle.style.position = 'fixed';
+                    particle.style.width = '4px';
+                    particle.style.height = '4px';
+                    particle.style.backgroundColor = '#8a6d3b';
+                    particle.style.borderRadius = '50%';
+                    particle.style.pointerEvents = 'none';
+                    particle.style.zIndex = '100';
+                    particle.style.left = `${x}px`;
+                    particle.style.top = `${y}px`;
+                    particle.style.boxShadow = '0 0 5px 1px rgba(138, 109, 59, 0.5)';
+
+                    document.body.appendChild(particle);
+
+                    const angle = Math.random() * Math.PI * 2;
+                    const distance = 20 + Math.random() * 30;
+                    const duration = 800 + Math.random() * 500;
+
+                    const animation = particle.animate([
+                        {
+                            transform: 'translate(0, 0) scale(1)',
+                            opacity: 1
+                        },
+                        {
+                            transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`,
+                            opacity: 0
+                        }
+                    ], {
+                        duration: duration,
+                        easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                    });
+
+                    animation.onfinish = () => {
+                        particle.remove();
+                    };
+                }
+            }
+
+            // 文化元素交互增强
+            const elements = document.querySelectorAll('.element');
+            document.addEventListener('mousemove', function (e) {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+
+                elements.forEach((element, index) => {
+                    const offsetX = (x - 0.5) * 60 * (index + 1);
+                    const offsetY = (y - 0.5) * 30 * (index + 1);
+                    const rotateY = (x - 0.5) * 10;
+                    const rotateX = (0.5 - y) * 10;
+
+                    element.style.transform = `translate(${offsetX}px, ${offsetY}px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+
+                    const rect = element.getBoundingClientRect();
+                    const elemX = rect.left + rect.width / 2;
+                    const elemY = rect.top + rect.height / 2;
+                    const distance = Math.sqrt(Math.pow(e.clientX - elemX, 2) + Math.pow(e.clientY - elemY, 2));
+                    const maxDistance = 300;
+
+                    if (distance < maxDistance) {
+                        const opacity = 0.15 + (1 - distance / maxDistance) * 0.3;
+                        element.style.opacity = opacity;
+                        element.style.filter = `drop-shadow(0 0 ${5 + (1 - distance / maxDistance) * 10}px rgba(138, 109, 59, 0.3))`;
+                    } else {
+                        element.style.opacity = 0.15;
+                        element.style.filter = 'drop-shadow(0 0 5px rgba(138, 109, 59, 0.2))';
+                    }
+                });
+            });
+
+            // 表单提交效果增强
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const submitBtn = this.querySelector('.submit-btn');
+                    const originalText = submitBtn.textContent;
+
+                    submitBtn.textContent = '处理中...';
+                    submitBtn.disabled = true;
+
+                    const rect = submitBtn.getBoundingClientRect();
+                    for (let i = 0; i < 20; i++) {
+                        const particle = document.createElement('div');
+                        particle.style.position = 'fixed';
+                        particle.style.width = '6px';
+                        particle.style.height = '6px';
+                        particle.style.backgroundColor = '#8a6d3b';
+                        particle.style.borderRadius = '50%';
+                        particle.style.pointerEvents = 'none';
+                        particle.style.zIndex = '100';
+                        particle.style.left = `${rect.left + rect.width / 2}px`;
+                        particle.style.top = `${rect.top + rect.height / 2}px`;
+                        particle.style.boxShadow = '0 0 10px 2px rgba(138, 109, 59, 0.5)';
+
+                        document.body.appendChild(particle);
+
+                        const angle = Math.random() * Math.PI * 2;
+                        const distance = 50 + Math.random() * 100;
+                        const duration = 1000 + Math.random() * 500;
+
+                        const animation = particle.animate([
+                            {
+                                transform: 'translate(0, 0) scale(1)',
+                                opacity: 1
+                            },
+                            {
+                                transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`,
+                                opacity: 0
+                            }
+                        ], {
+                            duration: duration,
+                            easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                        });
+
+                        animation.onfinish = () => {
+                            particle.remove();
+                        };
+                    }
+
+                    setTimeout(() => {
+                        submitBtn.textContent = '✓ ' + originalText;
+
+                        const successMsg = document.createElement('div');
+                        successMsg.className = 'success-message';
+                        successMsg.innerHTML = `
+              <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 20px;">✓</div>
+                <div>${this.id === 'login-form' ? '登录成功!' : '注册成功!'}</div>
+                <div style="font-size: 1rem; margin-top: 10px; opacity: 0.8;">欢迎来到云中大同</div>
+              </div>
+            `;
+                        this.appendChild(successMsg);
+
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                            successMsg.remove();
+                        }, 3000);
+                    }, 2000);
+                });
+            });
+
+            // 页面加载动画
+            gsap.from('.container', {
+                duration: 1.2,
+                y: 50,
+                opacity: 0,
+                ease: 'back.out(1.2)',
+                delay: 0.3
+            });
+
+            gsap.from('.logo-char', {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                stagger: 0.15,
+                ease: 'power3.out',
+                delay: 0.5
+            });
+
+            gsap.from('.form-toggle, .form-content', {
+                duration: 0.8,
+                y: 20,
+                opacity: 0,
+                stagger: 0.1,
+                ease: 'power2.out',
+                delay: 0.8
+            });
+
+            gsap.from('.element', {
+                duration: 1.5,
+                opacity: 0,
+                y: 30,
+                stagger: 0.2,
+                ease: 'sine.out',
+                delay: 0.5
+            });
+
+            // 返回按钮动画
+            gsap.from('.back-button', {
+                duration: 1,
+                x: -30,
+                opacity: 0,
+                ease: 'power3.out',
+                delay: 0.7
+            });
+        });
+
+        // 侧边栏
+        // 滚动显示控制
+        // window.addEventListener('scroll', function () {
+        // const sidebar = document.querySelector('.sidebar');
+        // const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        // if (scrollPosition > 300) { // 滚动超过300px显示
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.add('visible');
+
+        // } else {
+        //     sidebar.classList.remove('visible');
+        // }
+        // });
+
+        // 返回顶部功能
+        document.querySelector('[href="#top"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        // 侧边栏结束
+    </script>
+</body>
+
+</html>

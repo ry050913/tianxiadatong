@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 天下大同</title>
+    <link rel="stylesheet" href="css/lianxi.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <!-- 侧边栏 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- food -->
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="font_wr55sxo22/iconfont.css">
+
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="header">
+        <ul class="nav">
+            <div class="navbiankuang"></div>
+            <li class="logo">
+                <h1><a href="index.html">天下大同</a></h1>
+            </li>
+            <li class="nav-item"><a href="index.html">首页</a></li>
+            <li class="nav-item"><a href="scenic spot.html">景点</a>
+                <ul class="nav2">
+                    <li><a href="histroy-jingdian.html">历史文化类</a></li>
+                    <!-- <li><a href="#">自然风光类</a></li> -->
+                    <!-- <li><a href="#">古建筑类</a></li> -->
+                    <li><a href="hongse-jingdian.html">红色旅游类</a></li>
+                    <!-- <li><a href="#">农业生态类</a></li> -->
+                </ul>
+            </li>
+            <li class="nav-item"><a href="food.html">美食</a>
+                <ul class="nav2">
+                    <li><a href="food-noodles.html">经典面食</a></li>
+                    <li><a href="food-meat.html">肉类菜肴</a></li>
+                    <li><a href="food-liangfen.html">凉粉与冷食</a></li>
+                    <!-- <li><a href="">油炸食品</a></li> -->
+                </ul>
+            </li>
+            <li class="nav-item"><a href="minfeng.html">风俗</a>
+                <!-- <ul class="nav2">
+                    <li><a href="#">文化历史</a></li>
+                    <li><a href="#">文化意义</a></li>
+                </ul> -->
+            </li>
+            <li class="nav-item"><a href="product.html">文创</a>
+                <!-- <ul class="nav2">
+                    <li><a href="#">设计理念</a></li>
+                    <li><a href="#">文化背景</a></li>
+                    <li><a href="#">购买</a></li>
+                </ul> -->
+            </li>
+            <li class="nav-item active"><a href="lianxi.html active">联系我们</a></li>
+            <span class="sign-in"><a href="zhuce.html"></a></span>
+        </ul>
+    </div>
+    <!-- 导航栏 -->
+    <!-- 云冈石窟纹理背景 -->
+    <!-- <div class="grotto-bg"></div> -->
+
+    <!-- 云冈石窟浮雕装饰 -->
+    <div class="relief-decoration relief-1"></div>
+    <div class="relief-decoration relief-2"></div>
+
+    <!-- 主容器 -->
+    <div class="main-container">
+        <div class="container-header">
+            <h1 class="brush-hover">联系我们</h1>
+            <p>千年古都，塞外明珠。如有垂询，敬请赐函，我们将竭诚为您服务。</p>
+        </div>
+
+        <div class="contact-content">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">尊姓大名</label>
+                    <input type="text" id="name" class="form-control" required placeholder="请输入您的姓名">
+                    <div class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">电子邮箱</label>
+                    <input type="email" id="email" class="form-control" required placeholder="请输入您的电子邮箱">
+                    <div class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">联系电话 (可选)</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="请输入您的联系电话">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">咨询类型</label>
+                    <select id="subject" class="form-control" required>
+                        <option value="" disabled selected>请选择咨询类型</option>
+                        <option value="tourism">云冈石窟旅游咨询</option>
+                        <option value="culture">大同文化咨询</option>
+                        <option value="business">商业合作</option>
+                        <option value="feedback">意见建议</option>
+                        <option value="other">其他事项</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">您的留言</label>
+                    <textarea id="message" class="form-control" required placeholder="请留下您的宝贵意见或咨询内容"></textarea>
+                    <div class="error-message"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">提交咨询</button>
+            </form>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> 办公地址</h3>
+                    <p>山西省大同市平城区迎宾街XX号<br>大同市文化旅游局</p>
+                    <a href="https://maps.google.com" target="_blank">查看地图 <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-envelope"></i> 电子邮箱</h3>
+                    <p>info@datong.gov.cn<br>tourism@datong.gov.cn</p>
+                    <a href="mailto:info@datong.gov.cn">发送邮件 <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-phone"></i> 联系电话</h3>
+                    <p>0352-12345678<br>周一至周五: 8:30 - 17:30</p>
+                    <a href="tel:035212345678">拨打电话 <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-share-alt"></i> 关注我们</h3>
+                    <p>关注大同官方社交媒体，获取最新资讯</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 成功消息 - 仿古牌匾 -->
+    <div class="success-message" id="successMessage">
+        <h2>咨询已提交!</h2>
+        <p>感谢您联系天下大同。我们将尽快处理您的咨询，并在1-3个工作日内给您回复。</p>
+        <button class="close-btn" id="closeSuccess">确定</button>
+    </div>
+    <!-- 侧边栏 -->
+    <nav class="sidebar">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="scenic spot.html" class="nav-link">
+                    <i class="fas fa-university nav-icon"></i>
+                    <span class="nav-text">名胜古迹</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="food.html" class="nav-link">
+                    <i class="fas fa-utensils nav-icon"></i>
+                    <span class="nav-text">美味佳肴</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="product.html" class="nav-link">
+                    <i class="fas fa-palette nav-icon"></i>
+                    <span class="nav-text">文创精品</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#top" class="nav-link">
+                    <i class="fas fa-arrow-up nav-icon"></i>
+                    <span class="nav-text">返回顶部</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // 表单验证与提交
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // 重置错误状态
+            document.querySelectorAll('.form-control').forEach(input => {
+                input.classList.remove('error');
+            });
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+
+            // 验证姓名
+            if (!name.value.trim()) {
+                showError(name, '请输入您的姓名');
+                isValid = false;
+                if (isValid) name.focus(); // 这一行实际上不会执行，因为isValid为false
+            }
+
+            // 验证邮箱
+            if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                showError(email, '请输入有效的电子邮箱地址');
+                isValid = false;
+                if (isValid) email.focus();
+            }
+
+            // 验证留言
+            if (!message.value.trim()) {
+                showError(message, '请输入您的留言内容');
+                isValid = false;
+                if (isValid) message.focus();
+            }
+
+            // 如果有错误，跳转到第一个错误处
+            if (!isValid) {
+                const firstError = document.querySelector('.error');
+                if (firstError) {
+                    firstError.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    firstError.focus();
+                }
+                return;
+            }
+
+            // 表单验证通过，模拟提交
+            // 模拟表单提交
+            setTimeout(() => {
+                // 显示成功消息
+                document.getElementById('successMessage').classList.add('active');
+
+                // 添加云冈石窟佛像浮现特效
+                const form = this;
+                const buddhaEffect = document.createElement('div');
+                buddhaEffect.style.position = 'absolute';
+                buddhaEffect.style.top = '0';
+                buddhaEffect.style.left = '0';
+                buddhaEffect.style.width = '100%';
+                buddhaEffect.style.height = '100%';
+                buddhaEffect.style.backgroundImage = 'url("https://img.freepik.com/free-vector/buddha-silhouette_1308-36101.jpg")';
+                buddhaEffect.style.backgroundSize = 'contain';
+                buddhaEffect.style.backgroundPosition = 'center';
+                buddhaEffect.style.backgroundRepeat = 'no-repeat';
+                buddhaEffect.style.opacity = '0';
+                buddhaEffect.style.zIndex = '10';
+                buddhaEffect.style.pointerEvents = 'none';
+                form.appendChild(buddhaEffect);
+
+                // 佛像浮现动画
+                const animation = buddhaEffect.animate(
+                    [
+                        { opacity: 0, transform: 'scale(0.8)' },
+                        { opacity: 0.1, transform: 'scale(1)' },
+                        { opacity: 0 }
+                    ],
+                    {
+                        duration: 2000,
+                        easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                    }
+                );
+
+                animation.onfinish = () => {
+                    form.removeChild(buddhaEffect);
+                    form.reset();
+                };
+            }, 600);
+
+        });
+
+
+        // 显示错误函数
+        function showError(input, message) {
+            input.classList.add('error');
+            const errorElement = input.nextElementSibling;
+            if (errorElement && errorElement.classList.contains('error-message')) {
+                errorElement.textContent = message;
+            }
+        }
+
+        // 关闭成功消息
+        document.getElementById('closeSuccess').addEventListener('click', function () {
+            document.getElementById('successMessage').classList.remove('active');
+        });
+
+        // 页面加载动画 - 古城墙浮现
+        document.addEventListener('DOMContentLoaded', function () {
+            // const container = document.querySelector('.main-container');
+            // container.style.opacity = '1';
+            // container.style.transform = 'translateY(0)';
+
+            // setTimeout(() => {
+            //     container.animate(
+            //         [
+            //             { opacity: 0, transform: 'translateY(50px)' },
+            //             { opacity: 1, transform: 'translateY(0)' }
+            //         ],
+            //         {
+            //             duration: 1000,
+            //             easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+            //         }
+            //     ).onfinish = () => {
+            //         container.style.opacity = '1';
+            //         container.style.transform = 'translateY(0)';
+            //     };
+            // }, 300);
+
+            // 为输入框添加悬停效果
+            const inputs = document.querySelectorAll('.form-control');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.parentElement.querySelector('label').style.color = 'var(--primary-color)';
+                    this.parentElement.querySelector('label').style.transform = 'translateX(5px)';
+                });
+
+                input.addEventListener('blur', function () {
+                    this.parentElement.querySelector('label').style.color = '';
+                    this.parentElement.querySelector('label').style.transform = '';
+                });
+            });
+
+            // 随机生成大同风景背景
+            // function generateDatongBg() {
+            //     const patterns = [
+            //         'url("https://img.freepik.com/free-photo/yungang-grottoes_1417-1124.jpg")',
+            //         'url("https://img.freepik.com/free-photo/hanging-temple_1417-1123.jpg")',
+            //         'url("https://img.freepik.com/free-photo/datong-city-wall_1417-1125.jpg")'
+            //     ];
+
+            //     document.querySelector('body').style.backgroundImage =
+            //         patterns[Math.floor(Math.random() * patterns.length)];
+            // }
+
+            // // 页面加载时生成随机背景
+            // window.addEventListener('load', generateDatongBg);
+        });
+
+
+
+        // 侧边栏
+        // 滚动显示控制
+        window.addEventListener('scroll', function () {
+            const sidebar = document.querySelector('.sidebar');
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+            // if (scrollPosition > 300) { // 滚动超过300px显示
+            sidebar.classList.add('visible');
+            // } else {
+            //     sidebar.classList.remove('visible');
+            // }
+        });
+
+        // 返回顶部功能
+        document.querySelector('[href="#top"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        // 侧边栏结束
+    </script>
+</body>
+
+</html>

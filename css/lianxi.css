@@ -1,0 +1,668 @@
+ :root {
+     --primary-color: #9a3b26;
+     /* 云冈石窟红 */
+     --secondary-color: #d4a762;
+     /* 黄土高原金 */
+     --dark-color: #3a3226;
+     /* 古城墙灰 */
+     --light-color: #f0e6d2;
+     /* 大同土林浅黄 */
+     --accent-color: #5a7d8c;
+     /* 恒山青 */
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background-color: var(--light-color);
+     background-image: url('https://img.freepik.com/free-photo/old-paper-texture_1194-5416.jpg');
+     min-height: 100vh;
+     font-family: "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
+     color: var(--dark-color);
+     overflow-x: hidden;
+     position: relative;
+ }
+
+ .header {
+     top: 0px;
+ }
+
+ /* 云冈石窟纹理背景 */
+ body {
+     /* position: absolute;
+     width: 100%;
+     height: 3000px;
+     top: 0;
+     left: 0; */
+     z-index: -1;
+     opacity: 5;
+     background-image: url('https://img.freepik.com/free-vector/chinese-grotto-pattern_53876-88635.jpg');
+     background-size: cover;
+ }
+
+
+ /* 侧边栏 */
+ :root {
+     --primary-color: #6b4423;
+     /* 深褐色 */
+     --secondary-color: #d4af37;
+     /* 金色 */
+     --bg-color: #f5e6d3;
+     /* 浅黄背景 */
+ }
+
+ /* 侧边栏基础样式 */
+ .sidebar {
+     position: fixed;
+     left: -50px;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 60px;
+     background: var(--primary-color);
+     border-radius: 0 15px 15px 0;
+     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+     transition: all 0.3s ease;
+     z-index: 5000;
+     opacity: 0;
+     visibility: hidden;
+ }
+
+ /* 显示侧边栏 */
+ .sidebar.visible {
+     left: 0;
+     opacity: 1;
+     visibility: visible;
+ }
+
+ /* 悬停展开 */
+ .sidebar:hover {
+     width: 160px;
+ }
+
+ /* 导航菜单 */
+ .nav-menu {
+     padding: 0px 7px;
+     list-style: none;
+ }
+
+ .nav-item {
+     margin: 25px 0;
+     position: relative;
+     white-space: nowrap;
+ }
+
+ .nav-link {
+     color: var(--secondary-color);
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     padding: 8px;
+     border-radius: 8px;
+     transition: 0.3s;
+ }
+
+ .nav-link:hover {
+     background: var(--secondary-color);
+     transform: translateX(5px);
+ }
+
+ /* 图标样式 */
+
+
+ .nav-icon {
+     font-size: 1.5rem;
+     width: 30px;
+     flex-shrink: 0;
+ }
+
+ .nav-link:hover .nav-icon {
+
+     color: var(--primary-color);
+ }
+
+
+ /* 文字样式 */
+ .nav-text {
+     font-family: 'SimSun', serif;
+     /* 宋体 */
+     margin-left: 15px;
+     opacity: 0;
+     transition: opacity 0.3s;
+     color: #ffffff;
+     font-size: 16px;
+ }
+
+ /* 悬停显示文字 */
+ .sidebar:hover .nav-text {
+     opacity: 1;
+ }
+
+ /* 复古装饰线 */
+ /* .sidebar::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 10%;
+    height: 80%;
+    width: 3px;
+    background: linear-gradient(to bottom,
+            var(--secondary-color),
+            var(--bg-color),
+            var(--secondary-color));
+    border-radius: 2px;
+} */
+ .sidebar::after {
+     content: '';
+     position: absolute;
+     right: 5px;
+     top: 0;
+     height: 100%;
+     width: 2px;
+     background: linear-gradient(to bottom,
+             transparent 10%,
+             var(--secondary-color) 10% 90%,
+             transparent 90%);
+ }
+
+
+
+
+ /* 主容器 - 古城墙风格 */
+ .main-container {
+     max-width: 1200px;
+     margin: 9rem auto;
+     padding: 2rem;
+     position: relative;
+     z-index: 1;
+     background-color: rgba(240, 230, 210, 0.9);
+     border: 15px solid transparent;
+     border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%239a3b26" stroke-width="10" stroke-dasharray="15,10"/></svg>') 15;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+     /* 添加初始状态 */
+     opacity: 0;
+     transform: translateY(20px);
+     animation: fadeInUp 1s ease-out forwards;
+
+ }
+
+ /* 标题区 - 悬空寺风格 */
+ .container-header {
+     text-align: center;
+     /* margin-bottom: 3rem; */
+     position: relative;
+     padding: 2rem 0;
+     background: linear-gradient(to bottom, rgba(154, 59, 38, 0.1), transparent);
+     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+ }
+
+ .container-header h1 {
+     font-size: 4.5rem;
+     color: var(--primary-color);
+     margin-bottom: 3rem;
+     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+     position: relative;
+     display: inline-block;
+     animation: fadeIn 1s ease-out;
+ }
+
+ .container-header h1::before,
+ .container-header h1::after {
+     content: "‖";
+     color: var(--secondary-color);
+     margin: 0 1rem;
+     font-size: 2rem;
+     vertical-align: middle;
+ }
+
+ .container-header p {
+     font-size: 1.2rem;
+     color: var(--dark-color);
+     max-width: 700px;
+     margin: 0 auto;
+     line-height: 1.8;
+     animation: fadeIn 1.5s ease-out;
+     font-family: "楷体";
+ }
+
+ /* 内容布局 */
+ .contact-content {
+     display: flex;
+     width: 100%;
+     gap: 3rem;
+ }
+
+ /* 大同土林风格表单 */
+ .contact-form {
+     flex: 1;
+     background-color: rgba(255, 255, 255, 0.8);
+     padding: 2.5rem;
+     border-radius: 5px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     position: relative;
+     overflow: hidden;
+     animation: slideInLeft 1s ease-out;
+     transition: all 0.5s ease;
+     border: 1px solid var(--secondary-color);
+ }
+
+ .contact-form::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(135deg, transparent 60%, rgba(212, 167, 98, 0.1) 100%);
+     z-index: 0;
+ }
+
+ .contact-form:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+ }
+
+ /* 表单元素 - 仿古窗棂样式 */
+ .form-group {
+     margin-bottom: 2rem;
+     position: relative;
+     z-index: 1;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 0.8rem;
+     font-size: 1.1rem;
+     color: var(--primary-color);
+     font-weight: bold;
+     transition: all 0.3s ease;
+ }
+
+ .form-control {
+     width: 100%;
+     padding: 1rem;
+     border: 2px solid var(--secondary-color);
+     background-color: rgba(255, 255, 255, 0.8);
+     font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+     font-size: 1rem;
+     transition: all 0.3s ease;
+     color: var(--dark-color);
+     border-radius: 0;
+     scroll-margin-top: 300px;
+     /* 预留顶部空间(如固定导航栏高度) */
+ }
+
+ .form-control:focus {
+     outline: none;
+     border-color: var(--primary-color);
+     box-shadow: 0 0 0 3px rgba(154, 59, 38, 0.2);
+
+ }
+
+ textarea.form-control {
+     min-height: 180px;
+     resize: vertical;
+ }
+
+ /* 华严寺风格按钮 */
+ .submit-btn {
+     background: linear-gradient(to right, var(--primary-color), var(--dark-color));
+     color: white;
+     border: none;
+     padding: 1rem 2rem;
+     font-size: 1.1rem;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.5s ease;
+     width: 100%;
+     position: relative;
+     overflow: hidden;
+     letter-spacing: 1px;
+     border-radius: 0;
+     text-transform: uppercase;
+ }
+
+ .submit-btn::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to right, var(--dark-color), var(--primary-color));
+     transition: all 0.6s ease;
+     z-index: -1;
+ }
+
+ .submit-btn:hover::before {
+     left: 0;
+ }
+
+ .submit-btn:hover {
+     letter-spacing: 2px;
+ }
+
+ /* 联系信息卡片 - 仿古城建筑 */
+ .contact-info {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     animation: slideInRight 1s ease-out;
+ }
+
+ .info-card {
+     background-color: rgba(255, 255, 255, 0.8);
+     padding: 2rem;
+     border-radius: 5px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     transition: all 0.5s ease;
+     position: relative;
+     overflow: hidden;
+     border: 1px solid var(--primary-color);
+ }
+
+ .info-card::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 50px;
+     height: 50px;
+     background-color: var(--primary-color);
+     clip-path: polygon(0 0, 100% 0, 100% 100%);
+     opacity: 0.2;
+ }
+
+ .info-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+ }
+
+ .info-card h3 {
+     font-size: 1.4rem;
+     color: var(--primary-color);
+     margin-bottom: 1.5rem;
+     display: flex;
+     align-items: center;
+     border-bottom: 2px solid var(--secondary-color);
+     padding-bottom: 0.5rem;
+ }
+
+ .info-card h3 i {
+     margin-right: 1rem;
+     color: var(--accent-color);
+ }
+
+ .info-card p {
+     color: var(--dark-color);
+     line-height: 1.8;
+     margin-bottom: 1rem;
+ }
+
+ .info-card a {
+     color: var(--primary-color);
+     text-decoration: none;
+     transition: all 0.3s ease;
+     display: inline-block;
+     margin-top: 0.5rem;
+     font-weight: bold;
+     position: relative;
+
+ }
+
+ .social-links a {
+     color: #fff;
+     font-size: 20px;
+     text-align: center;
+     background-color: #9a3b26;
+     line-height: 36px;
+ }
+
+
+
+ .info-card a::after {
+     content: "";
+     position: absolute;
+     bottom: -2px;
+     left: 0;
+     width: 0;
+     height: 2px;
+     background-color: var(--primary-color);
+     transition: all 0.3s ease;
+ }
+
+ .info-card a:hover::after {
+     width: 100%;
+ }
+
+ /* 社交媒体图标 - 仿古钱币 */
+ .social-links {
+     display: flex;
+     gap: 1rem;
+     margin-top: 1.5rem;
+ }
+
+ .social-link {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* background-color: var(--primary-color); */
+     /* color: white; */
+     transition: all 0.3s ease;
+     text-decoration: none;
+     border: 2px solid var(--secondary-color);
+ }
+
+ .social-link:hover {
+     background-color: #fff;
+     color: #9a3b26;
+     transform: rotate(15deg) scale(1.1);
+ }
+
+ /* 云冈石窟浮雕装饰 */
+ .relief-decoration {
+     position: absolute;
+     width: 150px;
+     height: 150px;
+     opacity: 0.1;
+     z-index: 0;
+ }
+
+ .relief-1 {
+     top: 50px;
+     left: 50px;
+     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,50 Q35,20 50,50 T80,50" stroke="%239a3b26" fill="none" stroke-width="2"/></svg>');
+     animation: float 8s ease-in-out infinite;
+ }
+
+ .relief-2 {
+     bottom: 50px;
+     right: 50px;
+     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" stroke="%239a3b26" fill="none" stroke-width="2"/></svg>');
+     animation: float 10s ease-in-out infinite reverse;
+ }
+
+ /* 成功消息 - 仿古牌匾 */
+ .success-message {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%) scale(0);
+     background-color: var(--light-color);
+     padding: 3rem;
+     border: 5px solid var(--primary-color);
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+     text-align: center;
+     z-index: 100;
+     opacity: 0;
+     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     max-width: 500px;
+     width: 90%;
+ }
+
+ .success-message::before {
+     content: "";
+     position: absolute;
+     top: 10px;
+     left: 10px;
+     right: 10px;
+     bottom: 10px;
+     border: 1px solid var(--secondary-color);
+     pointer-events: none;
+ }
+
+ .success-message.active {
+     opacity: 1;
+     transform: translate(-50%, -50%) scale(1);
+ }
+
+ .success-message h2 {
+     color: var(--primary-color);
+     margin-bottom: 1.5rem;
+     font-size: 2rem;
+     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+ }
+
+ .success-message p {
+     color: var(--dark-color);
+     margin-bottom: 2rem;
+     line-height: 1.8;
+     font-size: 1.1rem;
+ }
+
+ .success-message .close-btn {
+     background-color: var(--primary-color);
+     color: white;
+     border: none;
+     padding: 0.8rem 2rem;
+     font-size: 1rem;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .success-message .close-btn:hover {
+     background-color: var(--dark-color);
+     letter-spacing: 2px;
+ }
+
+ /* 动画效果 */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes slideInLeft {
+     from {
+         opacity: 0;
+         transform: translateX(-50px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+
+ @keyframes slideInRight {
+     from {
+         opacity: 0;
+         transform: translateX(50px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+
+ @keyframes float {
+
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-15px);
+     }
+ }
+
+
+
+ /* 悬停毛笔效果 */
+ .brush-hover {
+     position: relative;
+     display: inline-block;
+     font-family: "华文行楷";
+
+ }
+
+ .brush-hover::after {
+     content: "";
+     position: absolute;
+     bottom: -3px;
+     left: 0;
+     width: 0;
+     height: 3px;
+     background-color: var(--primary-color);
+     transition: all 0.5s ease;
+ }
+
+ .brush-hover:hover::after {
+     width: 100%;
+ }
+
+ /* 响应式设计 */
+ @media (max-width: 768px) {
+     .contact-content {
+         flex-direction: column;
+     }
+
+     .header h1 {
+         font-size: 2.5rem;
+     }
+
+     .main-container {
+         padding: 1rem;
+         margin: 1rem;
+         border-width: 10px;
+     }
+
+     .contact-form,
+     .info-card {
+         padding: 1.5rem;
+     }
+
+     .relief-decoration {
+         display: none;
+     }
+ }

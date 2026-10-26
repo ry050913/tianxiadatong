@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9259909",
+      "name": "computer",
+      "font_class": "computer",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "14653502",
+      "name": "联系我们",
+      "font_class": "lianxiwomen",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    }
+  ]
+}

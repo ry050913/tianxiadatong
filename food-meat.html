@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大同</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/lingxing.css"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <!-- 侧边栏 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: url('images/food-bg1.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        /* 新增的banner样式 */
+        .meat-top-banner {
+            height: 850px;
+            width: 100%;
+            background-image: url('images/肉banner.png');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .meat-content {
+            background: url(images/bg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        :root {
+            --meat-lamb-bg: #fcefe8;
+            --meat-lamb-color: #8b4513;
+            --meat-rabbit-bg: #fff0f0;
+            --meat-rabbit-color: #b22222;
+            --meat-meat-bg: #f5f0e6;
+            --meat-meat-color: #cd853f;
+            --meat-soup-bg: #e8f1f5;
+            --meat-soup-color: #2f4f4f;
+        }
+
+        .meat-banner {
+            background: url(images/肉类菜肴-bg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        /* 新增标题样式 */
+        .meat-section-title {
+            text-align: center;
+            margin: 50px 0 100px;
+            position: relative;
+            font-size: 3.2rem;
+            color: #5d2601;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .meat-section-title::after {
+            content: "";
+            display: block;
+            width: 180px;
+            height: 4px;
+            background: linear-gradient(90deg, #8b4513, #cd853f, #b22222);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .meat-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 30px;
+        }
+
+        /* 修改后的食物板块样式 */
+        .meat-dish-section {
+            display: flex;
+            margin-top: 120px;
+            margin-bottom: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            min-height: 500px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+        }
+
+        /* 交替布局 */
+        .meat-dish-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* 文字区块 */
+        .meat-text-content-left {
+            flex: 1;
+            padding: 50px;
+            padding-left: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .meat-text-content-right {
+            flex: 1;
+            padding: 50px;
+            padding-right: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        #meat-lamb .meat-text-content-left {
+            color: #5d2601;
+        }
+
+        #meat-rabbit .meat-text-content-right {
+            color: #5d2601;
+        }
+
+        #meat-meat .meat-text-content-left {
+            color: #5d2601;
+        }
+
+        #meat-soup .meat-text-content-right {
+            color: #5d2601;
+        }
+
+        /* 色块区域 */
+        .meat-color-block {
+            width: 220px;
+            height: 400px;
+        }
+
+        /* 图片容器 */
+        .meat-image-frame {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 8px solid rgba(246, 226, 206, 0.8);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -175px;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .meat-dish-section:nth-child(even) .meat-image-frame {
+            left: -175px;
+            right: auto;
+            margin-bottom: 10px;
+        }
+
+        .meat-food-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        /* 文字排版 */
+        .meat-dish-section h2 {
+            font-size: 3em;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .meat-dish-section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 4px;
+            background: currentColor;
+        }
+
+        .meat-dish-section p {
+            line-height: 1.8;
+            font-size: 1.3em;
+            margin: 18px 0;
+        }
+
+        .meat-detail-list {
+            margin: 25px 0;
+            padding-left: 25px;
+            list-style: square;
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 1.2em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .meat-dish-section {
+                flex-direction: column !important;
+                min-height: auto;
+                margin-bottom: 50px;
+                padding: 20px;
+            }
+
+            .meat-text-content-left,
+            .meat-text-content-right {
+                padding: 30px;
+            }
+
+            .meat-color-block {
+                display: none;
+            }
+
+            .meat-image-frame {
+                position: relative;
+                width: 250px;
+                height: 250px;
+                right: auto !important;
+                left: 50% !important;
+                transform: translate(-50%, -30px);
+                border-width: 6px;
+            }
+
+            .meat-section-title {
+                font-size: 2.5rem;
+                margin: 40px 0 60px;
+            }
+
+            .meat-dish-section h2 {
+                font-size: 2.5em;
+            }
+
+            .meat-dish-section p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="header">
+        <ul class="nav">
+            <div class="navbiankuang"></div>
+            <li class="logo">
+                <h1><a href="index.html">天下大同</a></h1>
+            </li>
+            <li class="nav-item"><a href="index.html">首页</a></li>
+            <li class="nav-item"><a href="scenic spot.html">景点</a>
+                <ul class="nav2">
+                    <li><a href="histroy-jingdian.html">历史文化类</a></li>
+                    <!-- <li><a href="#">自然风光类</a></li> -->
+                    <!-- <li><a href="#">古建筑类</a></li> -->
+                    <li><a href="hongse-jingdian.html">红色旅游类</a></li>
+                    <!-- <li><a href="#">农业生态类</a></li> -->
+                </ul>
+            </li>
+            <li class="nav-item active"><a href="food.html">美食</a>
+                <ul class="nav2">
+                    <li><a href="food-noodles.html">经典面食</a></li>
+                    <li><a href="food-meat.html">肉类菜肴</a></li>
+                    <li><a href="food-liangfen.html">凉粉与冷食</a></li>
+                    <!-- <li><a href="#youzha">油炸食品</a></li> -->
+                </ul>
+            </li>
+            <li class="nav-item"><a href="minfeng.html">风俗</a>
+                <!-- <ul class="nav2">
+                    <li><a href="#">文化历史</a></li>
+                    <li><a href="#">文化意义</a></li>
+                </ul> -->
+            </li>
+            <li class="nav-item"><a href="product.html">文创</a>
+                <!-- <ul class="nav2">
+                    <li><a href="#">设计理念</a></li>
+                    <li><a href="#">文化背景</a></li>
+                    <li><a href="#">购买</a></li>
+                </ul> -->
+            </li>
+            <li><a href="lianxi.html">联系我们</a></li>
+            <span class="sign-in"><a href="zhuce.html"></a></span>
+        </ul>
+    </div>
+    <!-- 导航栏 -->
+
+    <!-- 新增的850px高度banner -->
+    <div class="meat-top-banner"></div>
+
+    <div class="meat-content">
+        <div class="meat-container">
+            <!-- 新增标题 -->
+            <h1 class="meat-section-title">肉类菜肴</h1>
+
+            <!-- 手抓羊肉 -->
+            <section class="meat-dish-section" id="meat-lamb">
+                <div class="meat-text-content-left">
+                    <h2>手抓羊肉</h2>
+                    <p>大同传统名肴，源自塞北游牧民族饮食文化。选用恒山脚下放养羔羊，制作讲究：</p>
+                    <ul class="meat-detail-list">
+                        <li>恒山泉水炖煮保持鲜嫩</li>
+                        <li>秘制调料：大同沙葱、浑源黄芪</li>
+                        <li>配广灵豆腐同煮增香</li>
+                    </ul>
+                    <p>肉质鲜嫩多汁，肥而不腻，搭配大同铜火锅食用更显塞北豪迈风情。</p>
+                    <div class="meat-image-frame">
+                        <img src="images/手抓羊肉.png" alt="手抓羊肉" class="meat-food-img">
+                    </div>
+                </div>
+                <div class="meat-color-block"></div>
+            </section>
+
+            <!-- 麻辣兔头 -->
+            <section class="meat-dish-section" id="meat-rabbit">
+                <div class="meat-text-content-right">
+                    <h2>麻辣兔头</h2>
+                    <p>大同夜市特色小吃，制作工艺独特：</p>
+                    <ul class="meat-detail-list">
+                        <li>选用云州区散养肉兔</li>
+                        <li>老汤卤制加入大同火山岩辣椒</li>
+                        <li>配灵丘花椒提香</li>
+                    </ul>
+                    <p>先吮吸卤汁，再拆解脸颊肉，最后吸食脑髓。建议搭配大同本地沙棘汁解辣。</p>
+                    <div class="meat-image-frame">
+                        <img src="images/麻辣兔头.png" alt="麻辣兔头" class="meat-food-img">
+                    </div>
+                </div>
+                <div class="meat-color-block"></div>
+            </section>
+
+            <!-- 过油肉 -->
+            <section class="meat-dish-section" id="meat-meat">
+                <div class="meat-text-content-left">
+                    <h2>过油肉</h2>
+                    <p>大同传统名菜，晋北特色代表：</p>
+                    <ul class="meat-detail-list">
+                        <li>选用本地散养黑猪肉</li>
+                        <li>大同胡麻油爆炒</li>
+                        <li>配广灵木耳、阳高杏鲍菇</li>
+                    </ul>
+                    <p>传统吃法搭配大同黄糕，肉香与糕香交融，体现塞北饮食粗犷特色。</p>
+                    <div class="meat-image-frame">
+                        <img src="images/过油肉.png" alt="过油肉" class="meat-food-img">
+                    </div>
+                </div>
+                <div class="meat-color-block"></div>
+            </section>
+
+            <!-- 羊杂割 -->
+            <section class="meat-dish-section" id="meat-soup">
+                <div class="meat-text-content-right">
+                    <h2>羊杂割</h2>
+                    <p>大同经典早餐，讲究"三绝"：</p>
+                    <ul class="meat-detail-list">
+                        <li>汤绝：羊骨恒山泉水熬制</li>
+                        <li>杂绝：新鲜羊杂当日处理</li>
+                        <li>饼绝：现烤大同麻油饼</li>
+                    </ul>
+                    <p>汤底用大同铜锅熬制，加入浑源粉条，配大同陈醋提鲜，冬日驱寒佳品。</p>
+                    <div class="meat-image-frame">
+                        <img src="images/羊杂割.png" alt="羊杂割" class="meat-food-img">
+                    </div>
+                </div>
+                <div class="meat-color-block"></div>
+            </section>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <div class="social-item">
+                    <div class="social-icon">微</div>
+                    <div>官方微信</div>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon">微</div>
+                    <div>官方微博</div>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon">淘</div>
+                    <div>文创淘宝</div>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon">信</div>
+                    <div>大同微店</div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">故宫博物院</a>
+                <a href="#">中国国家博物馆</a>
+                <a href="#">官方网站</a>
+                <a href="#">数据研究院</a>
+                <a href="#">龙门石窟</a>
+                <a href="#">爱彩山石窟</a>
+                <a href="#">大理石湖研究院</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">网站地图</a>
+                <a href="#">法律声明</a>
+            </div>
+
+            <div class="footer-info">
+                <p>Copyright &copy; 2021 云冈石窟 All Rights Reserved. 晋ICP备05008816号-1</p>
+                <p>网站建设：北京分形科技</p>
+                <p class="visitor-count">网站浏览人数：<span id="visitorCount">1,024,568</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
